@@ -1,0 +1,26 @@
+{
+  "name": "field",
+  "type": "component",
+  "title": "Field",
+  "description": "A form field layout with label, description, error, and invalid environment propagation.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "label"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Field/CNField.swift",
+    "Sources/NativeCN/Components/Field/CNFieldEnvironment.swift",
+    "Sources/NativeCN/Components/Label/CNLabel.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Field/CNField+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FieldInput.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Field"
+  }
+}

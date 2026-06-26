@@ -1,0 +1,23 @@
+{
+  "name": "avatar",
+  "type": "component",
+  "title": "Avatar",
+  "description": "A profile image and fallback initials component.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Avatar/CNAvatar.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Avatar/CNAvatar+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/LoadingMedia.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Avatar"
+  }
+}

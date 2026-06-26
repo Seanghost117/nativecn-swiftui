@@ -1,0 +1,24 @@
+{
+  "name": "toggle",
+  "type": "component",
+  "title": "Toggle",
+  "description": "A pressable on/off control built from NativeCN button styling.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Toggle/CNToggle.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Toggle/CNToggle+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Toggle"
+  }
+}

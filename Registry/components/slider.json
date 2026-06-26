@@ -1,0 +1,23 @@
+{
+  "name": "slider",
+  "type": "component",
+  "title": "Slider",
+  "description": "A token-aware value slider with optional label and value display.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Slider/CNSlider.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Slider/CNSlider+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Slider"
+  }
+}

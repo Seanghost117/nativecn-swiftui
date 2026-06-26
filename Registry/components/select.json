@@ -1,0 +1,24 @@
+{
+  "name": "select",
+  "type": "component",
+  "title": "Select",
+  "description": "A native menu-backed select control.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Select/CNSelect.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Select/CNSelect+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Select"
+  }
+}

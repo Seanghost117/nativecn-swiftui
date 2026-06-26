@@ -1,0 +1,25 @@
+{
+  "name": "dialog",
+  "type": "component",
+  "title": "Dialog",
+  "description": "A token-driven modal dialog surface for confirm flows.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Dialog/CNDialog.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Dialog"
+  }
+}

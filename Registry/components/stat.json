@@ -1,0 +1,24 @@
+{
+  "name": "stat",
+  "type": "component",
+  "title": "Stat",
+  "description": "A compact metric card for dashboards and summaries.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNStat.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

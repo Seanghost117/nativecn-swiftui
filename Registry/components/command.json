@@ -1,0 +1,26 @@
+{
+  "name": "command",
+  "type": "component",
+  "title": "Command",
+  "description": "A searchable command palette with grouped native button actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "separator",
+    "keyboard-shortcut"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Command/CNCommandPalette.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Command/CNCommand+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Command.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Command"
+  }
+}

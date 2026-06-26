@@ -1,0 +1,24 @@
+{
+  "name": "section",
+  "type": "component",
+  "title": "Section",
+  "description": "A token-driven grouped section for related screen content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Layout/CNSection.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Layout/CNLayout+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Layout"
+  }
+}

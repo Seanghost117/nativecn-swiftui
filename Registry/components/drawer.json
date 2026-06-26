@@ -1,0 +1,27 @@
+{
+  "name": "drawer",
+  "type": "component",
+  "title": "Drawer",
+  "description": "A token-driven drawer surface for side-panel and task-panel flows.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "button",
+    "description-list",
+    "badge"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Drawer/CNDrawer.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Drawer/CNDrawer+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Drawer"
+  }
+}

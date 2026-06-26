@@ -1,0 +1,23 @@
+{
+  "name": "radio-group",
+  "type": "component",
+  "title": "Radio Group",
+  "description": "A single-selection radio group with optional option descriptions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/RadioGroup/CNRadioGroup.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/RadioGroup/CNRadioGroup+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/RadioGroup"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "badge",
+  "type": "component",
+  "title": "Badge",
+  "description": "A compact semantic status label with token-driven variants.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Badge/CNBadge.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Badge/CNBadge+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Badge.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Badge"
+  }
+}

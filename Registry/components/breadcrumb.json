@@ -1,0 +1,23 @@
+{
+  "name": "breadcrumb",
+  "type": "component",
+  "title": "Breadcrumb",
+  "description": "A compact breadcrumb trail for hierarchical navigation.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Navigation/CNBreadcrumb.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Navigation/CNNavigation+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Navigation.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Navigation"
+  }
+}

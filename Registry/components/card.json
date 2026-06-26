@@ -1,0 +1,24 @@
+{
+  "name": "card",
+  "type": "component",
+  "title": "Card",
+  "description": "Composable card containers for grouped content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Card/CNCard.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Card/CNCard+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Card.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Card"
+  }
+}

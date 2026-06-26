@@ -1,0 +1,23 @@
+{
+  "name": "inline-code",
+  "type": "component",
+  "title": "Inline Code",
+  "description": "A compact inline monospaced code token for prose and docs surfaces.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Content/CNInlineCode.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Content/CNContent+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Content"
+  }
+}

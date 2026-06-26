@@ -1,0 +1,25 @@
+{
+  "name": "code-block",
+  "type": "component",
+  "title": "Code Block",
+  "description": "A monospaced code block for commands and snippets.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "separator"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Content/CNCodeBlock.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Content/CNContent+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Content"
+  }
+}

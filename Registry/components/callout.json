@@ -1,0 +1,25 @@
+{
+  "name": "callout",
+  "type": "component",
+  "title": "Callout",
+  "description": "A content-oriented callout for guidance, tips, and important notes.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Content/CNCallout.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Content/CNContent+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Content"
+  }
+}

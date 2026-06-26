@@ -1,0 +1,26 @@
+{
+  "name": "alert-dialog",
+  "type": "component",
+  "title": "Alert Dialog",
+  "description": "A purpose-built confirmation dialog for consequential actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "button",
+    "dialog"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/AlertDialog/CNAlertDialog.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/AlertDialog/CNAlertDialog+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/AlertDialog"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "keyboard-shortcut",
+  "type": "component",
+  "title": "Keyboard Shortcut",
+  "description": "A compact visual keyboard shortcut made from bordered keycaps.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Content/CNKeyboardShortcut.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Content/CNContent+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Content"
+  }
+}

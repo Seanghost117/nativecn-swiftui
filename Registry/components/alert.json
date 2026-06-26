@@ -1,0 +1,24 @@
+{
+  "name": "alert",
+  "type": "component",
+  "title": "Alert",
+  "description": "An inline feedback surface for status, warning, and error messages.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Alert/CNAlert.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Alert"
+  }
+}

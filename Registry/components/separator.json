@@ -1,0 +1,23 @@
+{
+  "name": "separator",
+  "type": "component",
+  "title": "Separator",
+  "description": "Horizontal and vertical separators that use the border token.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Separator/CNSeparator.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Separator/CNSeparator+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Separator.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Separator"
+  }
+}

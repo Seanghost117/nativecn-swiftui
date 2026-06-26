@@ -1,0 +1,24 @@
+{
+  "name": "list-row",
+  "type": "component",
+  "title": "List Row",
+  "description": "A compact row for settings, menus, and grouped lists.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "badge"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Layout/CNListRow.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Layout/CNLayout+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Layout"
+  }
+}

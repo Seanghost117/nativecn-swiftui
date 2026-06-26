@@ -1,0 +1,23 @@
+{
+  "name": "page-header",
+  "type": "component",
+  "title": "Page Header",
+  "description": "A page-level header with title, optional subtitle, and trailing actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Layout/CNPageHeader.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Layout/CNLayout+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Layout"
+  }
+}

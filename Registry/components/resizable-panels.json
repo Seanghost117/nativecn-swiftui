@@ -1,0 +1,24 @@
+{
+  "name": "resizable-panels",
+  "type": "component",
+  "title": "Resizable Panels",
+  "description": "A two-pane resizable layout for inspector and workspace surfaces.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/ResizablePanels/CNResizablePanels.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/ResizablePanels/CNResizablePanels+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/ResizablePanels"
+  }
+}

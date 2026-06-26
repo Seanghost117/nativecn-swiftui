@@ -1,0 +1,24 @@
+{
+  "name": "textarea",
+  "type": "component",
+  "title": "Textarea",
+  "description": "A multi-line text input with minimum and maximum height controls.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "field"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Textarea/CNTextarea.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Textarea/CNTextarea+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Textarea"
+  }
+}

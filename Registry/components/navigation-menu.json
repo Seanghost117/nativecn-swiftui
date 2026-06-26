@@ -1,0 +1,23 @@
+{
+  "name": "navigation-menu",
+  "type": "component",
+  "title": "Navigation Menu",
+  "description": "A token-driven top-level navigation menu with native menu-backed child items.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Navigation/CNNavigationMenu.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Navigation/CNNavigation+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Navigation.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Navigation"
+  }
+}

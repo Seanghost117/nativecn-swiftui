@@ -1,0 +1,23 @@
+{
+  "name": "status-badge",
+  "type": "component",
+  "title": "Status Badge",
+  "description": "A compact semantic status indicator.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNStatusBadge.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

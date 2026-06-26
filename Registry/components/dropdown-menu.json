@@ -1,0 +1,24 @@
+{
+  "name": "dropdown-menu",
+  "type": "component",
+  "title": "Dropdown Menu",
+  "description": "A native menu-backed dropdown menu with optional destructive items.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DropdownMenu/CNDropdownMenu.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DropdownMenu"
+  }
+}

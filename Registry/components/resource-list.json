@@ -1,0 +1,27 @@
+{
+  "name": "resource-list",
+  "type": "component",
+  "title": "Resource List",
+  "description": "A token-driven list for app resources and records.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "separator",
+    "status-badge",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNResourceList.swift",
+    "Sources/NativeCN/Components/DataDisplay/CNStatusBadge.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

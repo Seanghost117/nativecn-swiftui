@@ -1,0 +1,24 @@
+{
+  "name": "sidebar",
+  "type": "component",
+  "title": "Sidebar",
+  "description": "A token-driven grouped sidebar for app-shell navigation.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Navigation/CNSidebar.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Navigation/CNNavigation+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Navigation.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Navigation"
+  }
+}

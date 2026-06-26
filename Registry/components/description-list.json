@@ -1,0 +1,25 @@
+{
+  "name": "description-list",
+  "type": "component",
+  "title": "Description List",
+  "description": "A token-driven key-value list for metadata and details.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "separator",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNDescriptionList.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

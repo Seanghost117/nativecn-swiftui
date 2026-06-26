@@ -1,0 +1,24 @@
+{
+  "name": "button",
+  "type": "component",
+  "title": "Button",
+  "description": "A token-driven SwiftUI button with variants, sizes, loading state, and custom label content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Button/CNButton.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Button/CNButton+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Button.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Button"
+  }
+}

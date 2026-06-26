@@ -1,0 +1,24 @@
+{
+  "name": "menubar",
+  "type": "component",
+  "title": "Menubar",
+  "description": "A token-driven menu bar for compact command clusters.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Menubar/CNMenubar.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Menubar/CNMenubar+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Menubar"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "calendar",
+  "type": "component",
+  "title": "Calendar",
+  "description": "Native date picker and date range components with token-framed NativeCN styling.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Calendar/CNDatePicker.swift",
+    "Sources/NativeCN/Components/Calendar/CNCalendarMonth.swift",
+    "Sources/NativeCN/Components/Calendar/CNDateRangePicker.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Calendar/CNCalendar+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Calendar.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Calendar"
+  }
+}

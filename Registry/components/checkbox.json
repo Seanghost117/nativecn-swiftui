@@ -1,0 +1,23 @@
+{
+  "name": "checkbox",
+  "type": "component",
+  "title": "Checkbox",
+  "description": "A checkbox control with label and selected-state styling.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Checkbox/CNCheckbox.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Checkbox/CNCheckbox+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Checkbox"
+  }
+}

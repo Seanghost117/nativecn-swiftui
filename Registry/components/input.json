@@ -1,0 +1,22 @@
+{
+  "name": "input",
+  "type": "component",
+  "title": "Input",
+  "description": "A single-line text input with disabled, invalid, and accessory support.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "field"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Input/CNInput.swift"
+  ],
+  "docs": [
+    "Docs/Components/FieldInput.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Input"
+  }
+}

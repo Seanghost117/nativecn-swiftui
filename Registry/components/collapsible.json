@@ -1,0 +1,25 @@
+{
+  "name": "collapsible",
+  "type": "component",
+  "title": "Collapsible",
+  "description": "A compact disclosure surface for optional or advanced content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "separator"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Interaction/CNCollapsible.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Interaction/CNInteraction+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Interaction.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Interaction"
+  }
+}

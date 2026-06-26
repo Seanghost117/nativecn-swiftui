@@ -1,0 +1,24 @@
+{
+  "name": "pagination",
+  "type": "component",
+  "title": "Pagination",
+  "description": "A compact pagination control for paged lists and tables.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNPagination.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

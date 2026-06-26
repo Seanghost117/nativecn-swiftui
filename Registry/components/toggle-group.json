@@ -1,0 +1,25 @@
+{
+  "name": "toggle-group",
+  "type": "component",
+  "title": "Toggle Group",
+  "description": "A group of selectable toggle options.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button",
+    "toggle"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Toggle/CNToggle.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Toggle/CNToggle+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Toggle"
+  }
+}

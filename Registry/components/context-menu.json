@@ -1,0 +1,23 @@
+{
+  "name": "context-menu",
+  "type": "component",
+  "title": "Context Menu",
+  "description": "Native context menu item metadata and a view modifier for contextual actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Interaction/CNContextMenu.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Interaction/CNInteraction+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Interaction.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Interaction"
+  }
+}

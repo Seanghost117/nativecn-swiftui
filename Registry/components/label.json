@@ -1,0 +1,20 @@
+{
+  "name": "label",
+  "type": "component",
+  "title": "Label",
+  "description": "A form label with required-state affordance.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Label/CNLabel.swift"
+  ],
+  "docs": [
+    "Docs/Components/MVP.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Label"
+  }
+}

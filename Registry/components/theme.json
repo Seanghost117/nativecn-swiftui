@@ -1,0 +1,26 @@
+{
+  "name": "theme",
+  "type": "foundation",
+  "title": "Theme",
+  "description": "Theme values, default light/dark themes, theme mode, provider, and environment modifier.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens"
+  ],
+  "files": [
+    "Sources/NativeCN/Theme/CNTheme.swift",
+    "Sources/NativeCN/Theme/CNThemeEnvironment.swift",
+    "Sources/NativeCN/Theme/CNThemeMode.swift",
+    "Sources/NativeCN/Theme/CNThemeProvider.swift",
+    "Sources/NativeCN/Theme/CNDefaultTheme.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Theme/CNThemeProvider+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Theming.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Theme"
+  }
+}

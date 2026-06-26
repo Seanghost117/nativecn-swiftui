@@ -1,0 +1,25 @@
+{
+  "name": "data-table",
+  "type": "component",
+  "title": "Data Table",
+  "description": "A lightweight, horizontally scrollable data table.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "separator",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataTable.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/DataDisplay/CNDataDisplay+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/DataDisplay"
+  }
+}

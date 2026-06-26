@@ -1,0 +1,23 @@
+{
+  "name": "skeleton",
+  "type": "component",
+  "title": "Skeleton",
+  "description": "A loading placeholder with rectangle, rounded rectangle, and circle shapes.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Skeleton/CNSkeleton.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Skeleton/CNSkeleton+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/LoadingMedia.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Skeleton"
+  }
+}

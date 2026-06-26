@@ -1,0 +1,23 @@
+{
+  "name": "spinner",
+  "type": "component",
+  "title": "Spinner",
+  "description": "A compact indeterminate loading indicator.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Spinner/CNSpinner.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Spinner/CNSpinner+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/LoadingMedia.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Spinner"
+  }
+}

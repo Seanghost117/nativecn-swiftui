@@ -1,0 +1,27 @@
+{
+  "name": "primitives",
+  "type": "foundation",
+  "title": "Primitives",
+  "description": "Shared control size, state, focus, border, loading, platform, and preview helpers used by components.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Primitives/CNBorderModifier.swift",
+    "Sources/NativeCN/Primitives/CNControlSize.swift",
+    "Sources/NativeCN/Primitives/CNControlState.swift",
+    "Sources/NativeCN/Primitives/CNFocusRing.swift",
+    "Sources/NativeCN/Primitives/CNInteractiveScaleModifier.swift",
+    "Sources/NativeCN/Primitives/CNLoadingIndicator.swift",
+    "Sources/NativeCN/Primitives/CNPreviewHarness.swift",
+    "Sources/NativeCN/Utilities/CNPlatform.swift"
+  ],
+  "docs": [
+    "Docs/Primitives.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Primitives"
+  }
+}

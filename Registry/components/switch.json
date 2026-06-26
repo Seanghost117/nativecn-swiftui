@@ -1,0 +1,23 @@
+{
+  "name": "switch",
+  "type": "component",
+  "title": "Switch",
+  "description": "A token-aware binary switch with label support.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Switch/CNSwitch.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Switch/CNSwitch+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Switch"
+  }
+}

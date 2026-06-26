@@ -1,0 +1,25 @@
+{
+  "name": "combobox",
+  "type": "component",
+  "title": "Combobox",
+  "description": "A searchable select control backed by native popover presentation.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "separator"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Combobox/CNCombobox.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Combobox/CNCombobox+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Combobox"
+  }
+}

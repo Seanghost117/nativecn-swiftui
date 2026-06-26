@@ -1,0 +1,25 @@
+{
+  "name": "carousel",
+  "type": "component",
+  "title": "Carousel",
+  "description": "A horizontally paged carousel for custom item content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "card"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Carousel/CNCarousel.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Carousel/CNCarousel+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Carousel"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "tabs",
+  "type": "component",
+  "title": "Tabs",
+  "description": "A token-driven tab trigger row.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Navigation/CNTabs.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Navigation/CNNavigation+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Navigation.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Navigation"
+  }
+}

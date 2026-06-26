@@ -1,0 +1,26 @@
+{
+  "name": "toast",
+  "type": "component",
+  "title": "Toast",
+  "description": "A single-toast presenter and token-driven toast view.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "alert"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Toast/CNToast.swift",
+    "Sources/NativeCN/Components/Alert/CNAlert.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Toast"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "note",
+  "type": "component",
+  "title": "Note",
+  "description": "A quiet explanatory note for supporting text.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Content/CNNote.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Content/CNContent+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Content"
+  }
+}

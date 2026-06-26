@@ -1,0 +1,22 @@
+{
+  "name": "aspect-ratio",
+  "type": "component",
+  "title": "Aspect Ratio",
+  "description": "A fixed-ratio layout container for media and preview surfaces.",
+  "stability": "stable",
+  "dependencies": [
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/AspectRatio/CNAspectRatio.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/AspectRatio/CNAspectRatio+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/AspectRatio"
+  }
+}

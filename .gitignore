@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Xcode
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Local app bundles and archives
+*.app/
+*.xcarchive/
+
+# Logs and reports
+*.log
+*.xcresult/
+
+# Editor and local environment files
+.vscode/
+.idea/
+*.swp
+*.swo
+.env
+.env.*
+
+# Codex/local automation scratch
+.codex/tmp/
+.agents/tmp/

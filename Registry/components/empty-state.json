@@ -1,0 +1,24 @@
+{
+  "name": "empty-state",
+  "type": "component",
+  "title": "Empty State",
+  "description": "A centered empty-state layout with optional icon, message, and actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Layout/CNEmptyState.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Layout/CNLayout+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Layout"
+  }
+}

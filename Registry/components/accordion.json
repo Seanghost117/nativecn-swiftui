@@ -1,0 +1,25 @@
+{
+  "name": "accordion",
+  "type": "component",
+  "title": "Accordion",
+  "description": "A themed disclosure surface for progressive content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "separator"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Interaction/CNAccordion.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Interaction/CNInteraction+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Interaction.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Interaction"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tooltip",
+  "type": "component",
+  "title": "Tooltip",
+  "description": "A compact token-driven tooltip for short contextual help.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Tooltip/CNTooltip.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Tooltip/CNTooltip+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Tooltip"
+  }
+}

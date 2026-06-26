@@ -1,0 +1,23 @@
+{
+  "name": "progress",
+  "type": "component",
+  "title": "Progress",
+  "description": "A linear progress indicator with optional label and token-driven track.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Progress/CNProgress.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Progress/CNProgress+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/LoadingMedia.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Progress"
+  }
+}

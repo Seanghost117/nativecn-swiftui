@@ -1,0 +1,23 @@
+{
+  "name": "popover",
+  "type": "component",
+  "title": "Popover",
+  "description": "A token-driven content wrapper for native SwiftUI popovers.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Popover/CNPopover.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Popover"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "hover-card",
+  "type": "component",
+  "title": "Hover Card",
+  "description": "A token-driven preview surface presented from hover or tap triggers.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/HoverCard/CNHoverCard.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/HoverCard/CNHoverCard+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/HoverCard"
+  }
+}

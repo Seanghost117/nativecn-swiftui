@@ -1,0 +1,23 @@
+{
+  "name": "sheet",
+  "type": "component",
+  "title": "Sheet",
+  "description": "A styled native SwiftUI sheet content container.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Sheet/CNSheet.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Alert/CNFeedbackOverlays+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FeedbackOverlays.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Sheet"
+  }
+}

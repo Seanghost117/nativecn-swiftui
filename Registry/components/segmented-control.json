@@ -1,0 +1,23 @@
+{
+  "name": "segmented-control",
+  "type": "component",
+  "title": "Segmented Control",
+  "description": "A compact token-driven single-selection segmented control.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Navigation/CNSegmentedControl.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Navigation/CNNavigation+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Navigation.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Navigation"
+  }
+}

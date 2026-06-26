@@ -1,0 +1,24 @@
+{
+  "name": "scroll-area",
+  "type": "component",
+  "title": "Scroll Area",
+  "description": "A constrained native scroll viewport for long content regions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/ScrollArea/CNScrollArea.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/ScrollArea/CNScrollArea+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/ScrollArea"
+  }
+}
