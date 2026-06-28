@@ -22,7 +22,7 @@ Follow-up:
 
 Status: pass.
 
-- Installation, theming, primitives, accessibility, registry, component docs, contribution docs, and roadmap exist.
+- Installation, theming, primitives, accessibility, registry, QA, component docs, contribution docs, and roadmap exist.
 - Component docs include copy-paste Swift examples, accessibility notes, theming notes, API references, and platform differences.
 - Registry docs describe manual copy-paste flow and source dependency mapping.
 
@@ -49,13 +49,16 @@ Manual QA before v1:
 - Reduce Motion validation.
 - Keyboard/focus review on macOS and iPad hardware keyboard.
 
+See [QA Pass](QA.md) for the repeatable manual review matrix.
+
 ## Visual QA Review
 
-Status: pass for source-level consistency; screenshots still required for release.
+Status: automated pass complete; manual screenshots still required for release.
 
 - Components use semantic theme tokens for color, radius, spacing, typography, shadows, and motion.
 - The catalog demonstrates light/dark theme toggling and Dynamic Type.
-- Component pages cover MVP, loading/media, forms/controls, and feedback/overlays.
+- Component pages cover MVP, loading/media, forms/controls, feedback/overlays, layout, navigation, data display, content, interaction, command, calendar, chat, and theme workflows.
+- Automated validation currently covers package build, catalog build, registry validation, and tests.
 
 Known visual risks:
 
@@ -80,12 +83,14 @@ Follow-up:
 ## Release Checklist
 
 - `swift build` passes.
+- `swift build --product NativeCNCatalog` passes.
 - `swift test` passes.
-- Catalog Swift files type-check.
-- Registry metadata validates.
+- `swift run NativeCNRegistry validate` passes.
+- Catalog Swift files type-check and launch instructions are documented.
 - README status and roadmap match the current phase.
 - Minimum platform support is documented.
 - Accessibility checklist is documented.
+- QA pass checklist is documented.
 - Copy-paste workflow is documented.
 
 ## v1 Migration Notes

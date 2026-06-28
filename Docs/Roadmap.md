@@ -34,6 +34,7 @@
 - Post-hardening slice: Chart scaffolding with tokenized containers, legends, palette helpers, and empty/loading states.
 - Post-hardening slice: Chat components, including Message Scroller, Message, Bubble, Attachment, and Marker.
 - Post-hardening slice: Registry modernization with local schemas, validation tooling, list output, and copy-plan generation.
+- Post-hardening slice: QA pass with automated validation commands, manual catalog matrix, accessibility matrix, and screenshot checklist.
 
 ## Next
 

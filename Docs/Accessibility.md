@@ -57,3 +57,5 @@ Accessibility is a release requirement for NativeCN components.
 - Confirm skeleton shimmer stops when Reduce Motion is enabled.
 - Confirm dialogs and sheets are reachable and dismissible with assistive technologies.
 - Confirm toast text is understandable without relying on color alone.
+
+See [QA Pass](QA.md) for the broader visual, accessibility, and screenshot matrix.

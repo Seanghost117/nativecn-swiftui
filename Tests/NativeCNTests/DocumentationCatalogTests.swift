@@ -7,6 +7,7 @@ final class DocumentationCatalogTests: XCTestCase {
             "Docs/Installation.md",
             "Docs/Theming.md",
             "Docs/Registry.md",
+            "Docs/QA.md",
             "Docs/V1-Hardening.md",
             "Docs/Accuracy-Audit.md",
             "Docs/Component-Philosophy.md",
@@ -84,6 +85,35 @@ final class DocumentationCatalogTests: XCTestCase {
         XCTAssertTrue(home.contains("CatalogCommandPage"))
         XCTAssertTrue(home.contains("CatalogCalendarPage"))
         XCTAssertTrue(home.contains("CatalogChatPage"))
+    }
+
+    func testQAPassDocumentsRequiredValidationAndManualMatrices() throws {
+        let qa = try contents(of: "Docs/QA.md")
+
+        for command in [
+            "swift build",
+            "swift build --product NativeCNCatalog",
+            "swift run NativeCNRegistry validate",
+            "swift test",
+        ] {
+            XCTAssertTrue(qa.contains(command), "QA doc should include \(command)")
+        }
+
+        for section in [
+            "## Automated Validation",
+            "## Catalog Launch",
+            "## Visual Matrix",
+            "## Accessibility Matrix",
+            "## Component Risk Focus",
+            "## Screenshot Capture",
+            "## Sign-Off Template",
+        ] {
+            XCTAssertTrue(qa.contains(section), "QA doc should include \(section)")
+        }
+
+        XCTAssertTrue(qa.contains("Chat"))
+        XCTAssertTrue(qa.contains("77 tests"))
+        XCTAssertTrue(qa.contains("78 registry items"))
     }
 
     func testComponentDocsIncludeCopyPasteExamplesAndRequiredSections() throws {

@@ -12,6 +12,15 @@ From the repository root:
 swift run NativeCNCatalog
 ```
 
+For a visible local macOS app bundle during QA:
+
+```bash
+swift build --product NativeCNCatalog
+cp .build/x86_64-apple-macosx/debug/NativeCNCatalog .build/NativeCNCatalog.app/Contents/MacOS/NativeCNCatalog
+codesign --force --sign - .build/NativeCNCatalog.app
+open -n -F .build/NativeCNCatalog.app
+```
+
 To view it in Xcode:
 
 ```bash
@@ -37,6 +46,10 @@ Current pages:
 - Navigation
 - Data Display
 - Content
+- Interaction
+- Command
+- Calendar
+- Chat
 - Example Screens
 
 Reserved shell sections:

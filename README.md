@@ -270,6 +270,7 @@ swift run NativeCNRegistry plan message-scroller chart --include-docs
 - [Primitives](Docs/Primitives.md)
 - [Component Philosophy](Docs/Component-Philosophy.md)
 - [Accessibility](Docs/Accessibility.md)
+- [QA Pass](Docs/QA.md)
 - [Registry](Docs/Registry.md)
 - [Roadmap](Docs/Roadmap.md)
 - [v1 Hardening](Docs/V1-Hardening.md)
