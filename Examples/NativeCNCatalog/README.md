@@ -2,7 +2,7 @@
 
 This directory contains the initial SwiftUI catalog shell for NativeCN examples.
 
-The catalog shell includes component pages, theme previews, Dynamic Type checks, and real-world example screens built from the current MVP component set.
+The catalog shell includes a jumpable Demo Lab, component pages, theme previews, Dynamic Type checks, and real-world example screens built from the current component set.
 
 ## Run
 
@@ -31,6 +31,7 @@ Then select the `NativeCNCatalog` scheme and run it on My Mac.
 
 Current pages:
 
+- Demo Lab
 - MVP Components
 - Tokens
 - Theme Playground

@@ -19,6 +19,14 @@ struct CatalogHomeView: View {
                         }
                     }
 
+                    Section("Start Here") {
+                        NavigationLink {
+                            CatalogDemoLabPage(useDarkTheme: $useDarkTheme)
+                        } label: {
+                            Label("Demo Lab", systemImage: "macwindow.badge.plus")
+                        }
+                    }
+
                     Section("Components") {
                         NavigationLink("Button") {
                             CatalogButtonPage()
@@ -116,6 +124,16 @@ struct CatalogHomeView: View {
                     }
                 }
                 .navigationTitle("NativeCN")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button {
+                            useDarkTheme.toggle()
+                        } label: {
+                            Label(useDarkTheme ? "Light" : "Dark", systemImage: useDarkTheme ? "sun.max" : "moon")
+                        }
+                        .accessibilityLabel(useDarkTheme ? "Switch to light theme" : "Switch to dark theme")
+                    }
+                }
             }
             .dynamicTypeSize(dynamicTypeSize)
             .preferredColorScheme(useDarkTheme ? .dark : .light)

@@ -23,7 +23,7 @@ Current automated pass:
 - `swift build`: pass
 - `swift build --product NativeCNCatalog`: pass
 - `swift run NativeCNRegistry validate`: pass, 78 registry items
-- `swift test`: pass, 77 tests
+- `swift test`: pass, 78 tests
 
 ## Catalog Launch
 
@@ -56,6 +56,7 @@ Review every catalog page in:
 
 Pages to review:
 
+- Demo Lab
 - Button
 - Badge
 - Card
@@ -107,6 +108,7 @@ Pay special attention to:
 
 Capture screenshots for release notes after the manual visual pass:
 
+- Demo Lab table of contents in light and dark theme
 - Catalog home in light and dark theme
 - Forms & Controls
 - Feedback & Overlays
@@ -132,4 +134,3 @@ QA pass:
 - Known issues:
 - Release recommendation:
 ```
-

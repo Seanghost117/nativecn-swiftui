@@ -43,6 +43,7 @@ final class DocumentationCatalogTests: XCTestCase {
     func testCatalogShellIncludesRequiredComponentPages() throws {
         let requiredPaths = [
             "Examples/NativeCNCatalog/NativeCNCatalog/Screens/CatalogHomeView.swift",
+            "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogDemoLabPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogButtonPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogBadgePage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogCardPage.swift",
@@ -70,6 +71,7 @@ final class DocumentationCatalogTests: XCTestCase {
         let home = try contents(of: "Examples/NativeCNCatalog/NativeCNCatalog/Screens/CatalogHomeView.swift")
         XCTAssertTrue(home.contains("Dark theme"))
         XCTAssertTrue(home.contains("Dynamic Type"))
+        XCTAssertTrue(home.contains("CatalogDemoLabPage"))
         XCTAssertTrue(home.contains("CatalogButtonPage"))
         XCTAssertTrue(home.contains("CatalogBadgePage"))
         XCTAssertTrue(home.contains("CatalogCardPage"))
@@ -112,7 +114,7 @@ final class DocumentationCatalogTests: XCTestCase {
         }
 
         XCTAssertTrue(qa.contains("Chat"))
-        XCTAssertTrue(qa.contains("77 tests"))
+        XCTAssertTrue(qa.contains("78 tests"))
         XCTAssertTrue(qa.contains("78 registry items"))
     }
 
