@@ -23,6 +23,7 @@ final class DocumentationCatalogTests: XCTestCase {
             "Docs/Components/Interaction.md",
             "Docs/Components/Command.md",
             "Docs/Components/Calendar.md",
+            "Docs/Components/Chat.md",
             "Docs/Accessibility.md",
             "Docs/Contributing.md",
             "Docs/Roadmap.md",
@@ -55,6 +56,7 @@ final class DocumentationCatalogTests: XCTestCase {
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogInteractionPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogCommandPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogCalendarPage.swift",
+            "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogChatPage.swift",
         ]
 
         for path in requiredPaths {
@@ -78,6 +80,7 @@ final class DocumentationCatalogTests: XCTestCase {
         XCTAssertTrue(home.contains("CatalogInteractionPage"))
         XCTAssertTrue(home.contains("CatalogCommandPage"))
         XCTAssertTrue(home.contains("CatalogCalendarPage"))
+        XCTAssertTrue(home.contains("CatalogChatPage"))
     }
 
     func testComponentDocsIncludeCopyPasteExamplesAndRequiredSections() throws {
@@ -97,6 +100,7 @@ final class DocumentationCatalogTests: XCTestCase {
             "Docs/Components/Interaction.md",
             "Docs/Components/Command.md",
             "Docs/Components/Calendar.md",
+            "Docs/Components/Chat.md",
         ]
 
         for path in docs {

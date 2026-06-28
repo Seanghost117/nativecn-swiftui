@@ -79,6 +79,11 @@ Lowest-fit areas:
 | CNDatePicker | 10 | 7 | 9 | Native SwiftUI date picking is the right first calendar step for Apple platforms, even though shadcn parity is intentionally looser. |
 | CNCalendarMonth | 8 | 9 | 9 | A focused month grid improves shadcn Calendar parity while staying small, accessible, and token-driven. |
 | CNDateRangePicker | 9 | 8 | 9 | Paired native pickers support common range workflows while avoiding premature custom calendar complexity. |
+| CNMessageScroller | 8 | 9 | 9 | Transcript scrolling uses native ScrollView behavior while exposing shadcn chat-style anchor ergonomics. |
+| CNMessage | 8 | 9 | 9 | Full message rows cover role-aware layout, metadata, status, avatars, and attachments without owning app chat state. |
+| CNBubble | 8 | 9 | 9 | Tokenized bubbles cover user, assistant, system, and tool roles while preserving ordinary SwiftUI content composition. |
+| CNAttachment | 9 | 9 | 9 | Attachment metadata maps cleanly to SwiftUI rows and closes the shadcn Attachment parity gap. |
+| CNMarker | 9 | 9 | 9 | Date, status, tool, and error markers provide transcript boundaries while staying accessible and lightweight. |
 | CNPagination | 9 | 9 | 9 | Compact page controls pair naturally with tables and resource lists while preserving native button semantics. |
 | CNAspectRatio | 10 | 9 | 9 | Native fixed-ratio layout maps directly to shadcn Aspect Ratio while preserving ordinary SwiftUI composition. |
 | CNScrollArea | 10 | 8 | 9 | Native ScrollView preserves platform scrolling while providing shadcn-style constrained viewport ownership. |

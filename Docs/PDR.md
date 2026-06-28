@@ -29,6 +29,7 @@ NativeCN is a SwiftUI-first component system inspired by shadcn/ui's copyable, t
 - Content components
 - Interaction components
 - Calendar components
+- Chat components
 - Registry metadata
 - Catalog app
 

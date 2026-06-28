@@ -85,6 +85,11 @@
     { "name": "collapsible", "type": "component", "path": "Registry/components/collapsible.json" },
     { "name": "context-menu", "type": "component", "path": "Registry/components/context-menu.json" },
     { "name": "command", "type": "component", "path": "Registry/components/command.json" },
-    { "name": "calendar", "type": "component", "path": "Registry/components/calendar.json" }
+    { "name": "calendar", "type": "component", "path": "Registry/components/calendar.json" },
+    { "name": "message-scroller", "type": "component", "path": "Registry/components/message-scroller.json" },
+    { "name": "message", "type": "component", "path": "Registry/components/message.json" },
+    { "name": "bubble", "type": "component", "path": "Registry/components/bubble.json" },
+    { "name": "attachment", "type": "component", "path": "Registry/components/attachment.json" },
+    { "name": "marker", "type": "component", "path": "Registry/components/marker.json" }
   ]
 }

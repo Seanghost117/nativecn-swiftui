@@ -216,6 +216,14 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNCalendarMonth`: visible month grid.
 - `CNDateRangePicker`: paired range selection.
 
+### Chat
+
+- `CNMessageScroller`: transcript scroll container with bottom and custom anchor support.
+- `CNMessage`: full chat message row with role-aware layout, metadata, status, avatar, and attachments.
+- `CNBubble`: tokenized message bubble for user, assistant, system, and tool roles.
+- `CNAttachment` and `CNAttachmentView`: file and artifact metadata inside chat bubbles.
+- `CNMarker`: date, status, tool, and error boundaries inside chat transcripts.
+
 ### Loading And Media
 
 - `CNAvatar`: image/fallback avatar.

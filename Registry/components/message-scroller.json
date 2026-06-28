@@ -1,0 +1,26 @@
+{
+  "name": "message-scroller",
+  "type": "component",
+  "title": "Message Scroller",
+  "description": "A scroll container for chat transcripts with bottom and custom anchor support.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives",
+    "message"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Chat/CNChat.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Chat/CNChat+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Chat.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Chat"
+  }
+}
+

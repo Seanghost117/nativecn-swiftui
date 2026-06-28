@@ -130,6 +130,11 @@ final class RegistryTests: XCTestCase {
             "context-menu",
             "command",
             "calendar",
+            "message-scroller",
+            "message",
+            "bubble",
+            "attachment",
+            "marker",
         ]
     }
 

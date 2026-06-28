@@ -76,6 +76,10 @@ struct CatalogHomeView: View {
                             CatalogCalendarPage()
                         }
 
+                        NavigationLink("Chat") {
+                            CatalogChatPage()
+                        }
+
                         NavigationLink("MVP Components") {
                             MVPComponentsExampleView()
                         }
