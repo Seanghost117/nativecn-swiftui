@@ -116,6 +116,8 @@ struct CatalogHomeView: View {
                                     CatalogNavigationPage()
                                 } else if page == .examples {
                                     CatalogExampleScreensPage()
+                                } else if page == .accessibility {
+                                    CatalogAccessibilityPage()
                                 } else {
                                     CatalogPlaceholderView(title: page.title, systemImage: page.systemImage)
                                 }

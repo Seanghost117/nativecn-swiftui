@@ -51,6 +51,7 @@ final class DocumentationCatalogTests: XCTestCase {
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogTokensPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogThemePlaygroundPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogExampleScreensPage.swift",
+            "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogAccessibilityPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogLoadingMediaPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogFormsControlsPage.swift",
             "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogFeedbackOverlaysPage.swift",
@@ -87,6 +88,7 @@ final class DocumentationCatalogTests: XCTestCase {
         XCTAssertTrue(home.contains("CatalogCommandPage"))
         XCTAssertTrue(home.contains("CatalogCalendarPage"))
         XCTAssertTrue(home.contains("CatalogChatPage"))
+        XCTAssertTrue(home.contains("CatalogAccessibilityPage"))
     }
 
     func testDemoLabIncludesInteractiveShowcaseCoverage() throws {
@@ -100,6 +102,23 @@ final class DocumentationCatalogTests: XCTestCase {
             "CNSidebar",
         ] {
             XCTAssertTrue(demoLab.contains(component), "Demo Lab should include \(component) coverage")
+        }
+    }
+
+    func testAccessibilityQAPageCoversManualReviewAreas() throws {
+        let accessibility = try contents(of: "Docs/Accessibility.md")
+        let page = try contents(of: "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogAccessibilityPage.swift")
+
+        XCTAssertTrue(accessibility.contains("Catalog Accessibility QA Page"))
+
+        for term in [
+            "VoiceOver",
+            "Keyboard",
+            "Dynamic Type",
+            "Reduce Motion",
+            "accessibilityLabel",
+        ] {
+            XCTAssertTrue(page.contains(term), "Accessibility QA page should mention \(term)")
         }
     }
 
@@ -128,7 +147,7 @@ final class DocumentationCatalogTests: XCTestCase {
         }
 
         XCTAssertTrue(qa.contains("Chat"))
-        XCTAssertTrue(qa.contains("79 tests"))
+        XCTAssertTrue(qa.contains("80 tests"))
         XCTAssertTrue(qa.contains("78 registry items"))
     }
 

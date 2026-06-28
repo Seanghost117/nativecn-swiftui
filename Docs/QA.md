@@ -23,7 +23,7 @@ Current automated pass:
 - `swift build`: pass
 - `swift build --product NativeCNCatalog`: pass
 - `swift run NativeCNRegistry validate`: pass, 78 registry items
-- `swift test`: pass, 79 tests
+- `swift test`: pass, 80 tests
 
 ## Catalog Launch
 
@@ -75,6 +75,7 @@ Pages to review:
 - MVP Components
 - Tokens
 - Theme Playground
+- Accessibility Playground
 - Example Screens
 
 ## Accessibility Matrix
@@ -115,6 +116,7 @@ Capture screenshots for release notes after the manual visual pass:
 - Data Display with chart states
 - Calendar
 - Chat
+- Accessibility Playground
 - Theme Playground
 
 Store release screenshots outside source control unless they become official docs assets.

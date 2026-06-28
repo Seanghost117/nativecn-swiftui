@@ -51,10 +51,10 @@ Current pages:
 - Command
 - Calendar
 - Chat
+- Accessibility Playground
 - Example Screens
 
 Reserved shell sections:
 
 - Forms
 - Feedback
-- Accessibility Playground

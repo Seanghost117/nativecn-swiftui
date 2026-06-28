@@ -47,6 +47,8 @@ Accessibility is a release requirement for NativeCN components.
 
 ## Manual QA Checklist
 
+The catalog includes a **Catalog Accessibility QA Page** under `Shell > Accessibility Playground`. Use it before the component-by-component pass to exercise labeled icon-only controls, field errors, keyboard-focused rows, native menus, Dynamic Type samples, loading labels, Reduce Motion-sensitive skeletons, and the accessibility review matrix in one place.
+
 - Run the catalog in light and dark themes.
 - Test default, large, and accessibility Dynamic Type sizes.
 - Navigate the catalog with VoiceOver.
