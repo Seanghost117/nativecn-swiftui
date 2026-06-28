@@ -29,7 +29,7 @@ NativeCN is designed to install with Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Seanghost117/nativecn-swiftui.git", branch: "public")
+    .package(url: "https://github.com/Seanghost117/nativecn-swiftui.git", from: "0.9.0")
 ]
 ```
 

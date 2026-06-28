@@ -8,7 +8,7 @@ Add the package to your app:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Seanghost117/nativecn-swiftui.git", branch: "public")
+    .package(url: "https://github.com/Seanghost117/nativecn-swiftui.git", from: "0.9.0")
 ]
 ```
 
@@ -18,7 +18,7 @@ Add the product to your app target:
 .product(name: "NativeCN", package: "nativecn-swiftui")
 ```
 
-Use the `public` branch until the package adopts a tagged release or default release branch.
+Use versioned Swift Package Manager dependencies for release builds. Branch dependencies remain useful for testing unreleased changes.
 
 ## Import
 
