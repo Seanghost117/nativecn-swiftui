@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nativecn.dev/schemas/registry.json",
+  "title": "NativeCN Registry Index",
+  "type": "object",
+  "required": [
+    "$schema",
+    "name",
+    "title",
+    "description",
+    "registryVersion",
+    "packageVersion",
+    "swiftToolsVersion",
+    "minimumPlatforms",
+    "copyPasteRoot",
+    "docs",
+    "items"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "registryVersion": { "type": "integer", "minimum": 1 },
+    "packageVersion": { "type": "string", "minLength": 1 },
+    "swiftToolsVersion": { "type": "string", "minLength": 1 },
+    "minimumPlatforms": {
+      "type": "object",
+      "required": ["iOS", "macOS"],
+      "additionalProperties": false,
+      "properties": {
+        "iOS": { "type": "string", "minLength": 1 },
+        "macOS": { "type": "string", "minLength": 1 }
+      }
+    },
+    "copyPasteRoot": { "type": "string", "minLength": 1 },
+    "docs": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "path"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "type": { "enum": ["foundation", "component"] },
+          "path": { "type": "string", "pattern": "^Registry/components/.+\\.json$" }
+        }
+      }
+    }
+  }
+}
+

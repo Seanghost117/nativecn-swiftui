@@ -33,6 +33,7 @@
 - Post-hardening slice: Primitive parity components, including Button Group, Input Group, Item, Table, Native Select, Direction, Typography, and stacked toasts.
 - Post-hardening slice: Chart scaffolding with tokenized containers, legends, palette helpers, and empty/loading states.
 - Post-hardening slice: Chat components, including Message Scroller, Message, Bubble, Attachment, and Marker.
+- Post-hardening slice: Registry modernization with local schemas, validation tooling, list output, and copy-plan generation.
 
 ## Next
 

@@ -7,10 +7,20 @@ NativeCN supports two usage modes:
 
 The registry is metadata only. It does not require a CLI, build plugin, package product, or network service.
 
+NativeCN also ships a small optional registry helper:
+
+```bash
+swift run NativeCNRegistry validate
+swift run NativeCNRegistry list
+swift run NativeCNRegistry plan button card --include-previews --include-docs
+```
+
 ## Files
 
 - `Registry/registry.json` is the top-level index.
 - `Registry/components/*.json` contains item metadata.
+- `Registry/schemas/registry.schema.json` describes the registry index shape.
+- `Registry/schemas/item.schema.json` describes each item metadata file.
 - Every item declares its source `files`, optional `previewFiles`, `docs`, and item `dependencies`.
 
 ## Source Dependency Mapping
@@ -64,6 +74,36 @@ The `button` item maps to:
 }
 ```
 
+To generate the same source order with the helper:
+
+```bash
+swift run NativeCNRegistry plan button
+```
+
+To include preview and docs paths in the output:
+
+```bash
+swift run NativeCNRegistry plan button --include-previews --include-docs
+```
+
+## Include Flow
+
+Use `plan` when preparing a copy-mode adoption:
+
+1. Pass one or more registry item names.
+2. The tool expands dependencies first.
+3. Copy `source` paths into each item's `copyPaste.destination`.
+4. Add `--include-previews` when copying previews into a preview target.
+5. Add `--include-docs` when collecting docs for internal review.
+
+Example:
+
+```bash
+swift run NativeCNRegistry plan message-scroller chart --include-docs
+```
+
+This keeps source copying deterministic while preserving app ownership after files are copied.
+
 ## Source Ownership
 
 In copy mode, the app owns the copied source. You can rename folders, adjust APIs, and remove components you do not use. Keep the `CN` prefix unless the app intentionally adopts a different namespace.
@@ -75,14 +115,20 @@ When copying into the same app target, the files do not need `import NativeCN`; 
 Run:
 
 ```bash
+swift run NativeCNRegistry validate
+```
+
+The registry validator verifies that the top-level registry is valid JSON, schema files exist, item metadata files exist, item dependencies resolve, dependency cycles are absent, and every declared source/doc/preview path exists.
+
+The Swift test suite also covers registry validity:
+
+```bash
 swift test
 ```
 
-The registry tests verify that the top-level registry is valid JSON, item metadata files exist, item dependencies resolve, and every declared source/doc/preview path exists.
-
 ## Future CLI
 
-A future CLI may automate:
+A future CLI may automate file copying and namespace rewriting:
 
 ```text
 nativecn add button
@@ -90,4 +136,4 @@ nativecn add card input field
 nativecn theme export --format swift
 ```
 
-The CLI remains optional. The registry is designed to be useful with manual copy-paste first.
+The CLI remains optional. The registry is designed to be useful with manual copy-paste and the lightweight validation/planning helper first.

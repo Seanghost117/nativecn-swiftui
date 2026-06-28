@@ -48,11 +48,43 @@ final class RegistryTests: XCTestCase {
         let docs = try contents(of: "Docs/Registry.md")
 
         XCTAssertTrue(docs.contains("Copy mode"))
+        XCTAssertTrue(docs.contains("Include Flow"))
+        XCTAssertTrue(docs.contains("swift run NativeCNRegistry validate"))
+        XCTAssertTrue(docs.contains("swift run NativeCNRegistry plan"))
         XCTAssertTrue(docs.contains("Registry/registry.json"))
+        XCTAssertTrue(docs.contains("Registry/schemas/registry.schema.json"))
+        XCTAssertTrue(docs.contains("Registry/schemas/item.schema.json"))
         XCTAssertTrue(docs.contains("Source Dependency Mapping"))
         XCTAssertTrue(docs.contains("dependencies"))
         XCTAssertTrue(docs.contains("source files"))
         XCTAssertTrue(docs.contains("CLI remains optional"))
+    }
+
+    func testRegistrySchemasCoverRequiredFields() throws {
+        let registrySchema = try contents(of: "Registry/schemas/registry.schema.json")
+        let itemSchema = try contents(of: "Registry/schemas/item.schema.json")
+
+        for requiredRegistryField in [
+            "registryVersion",
+            "packageVersion",
+            "minimumPlatforms",
+            "copyPasteRoot",
+            "items",
+        ] {
+            XCTAssertTrue(registrySchema.contains(requiredRegistryField), "registry schema should mention \(requiredRegistryField)")
+        }
+
+        for requiredItemField in [
+            "stability",
+            "dependencies",
+            "files",
+            "previewFiles",
+            "docs",
+            "copyPaste",
+            "destination",
+        ] {
+            XCTAssertTrue(itemSchema.contains(requiredItemField), "item schema should mention \(requiredItemField)")
+        }
     }
 
     private var requiredStableItems: Set<String> {

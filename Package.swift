@@ -17,6 +17,10 @@ let package = Package(
             name: "NativeCNCatalog",
             targets: ["NativeCNCatalog"]
         ),
+        .executable(
+            name: "NativeCNRegistry",
+            targets: ["NativeCNRegistry"]
+        ),
     ],
     targets: [
         .target(
@@ -26,6 +30,10 @@ let package = Package(
             name: "NativeCNCatalog",
             dependencies: ["NativeCN"],
             path: "Examples/NativeCNCatalog/NativeCNCatalog"
+        ),
+        .executableTarget(
+            name: "NativeCNRegistry",
+            path: "Tools/NativeCNRegistry"
         ),
         .testTarget(
             name: "NativeCNTests",

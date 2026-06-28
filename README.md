@@ -84,6 +84,13 @@ Run the catalog executable:
 swift run NativeCNCatalog
 ```
 
+Validate or inspect the registry:
+
+```bash
+swift run NativeCNRegistry validate
+swift run NativeCNRegistry plan button --include-previews --include-docs
+```
+
 The repository also contains a generated local macOS app bundle during development at `.build/NativeCNCatalog.app`; that bundle is ignored by Git.
 
 ## Project Assets
@@ -92,6 +99,8 @@ The repository also contains a generated local macOS app bundle during developme
 - `Examples/NativeCNCatalog`: interactive catalog app used for local QA and component demos.
 - `Registry/registry.json`: registry index for stable copy-paste elements.
 - `Registry/components/*.json`: per-component source, dependency, docs, and destination metadata.
+- `Registry/schemas/*.json`: local schemas for registry index and item metadata.
+- `Tools/NativeCNRegistry`: lightweight registry validation and copy-plan helper.
 - `Docs`: installation, theming, component, registry, accessibility, roadmap, and hardening documentation.
 - `Tests/NativeCNTests`: unit and compile-smoke coverage for tokens, components, docs, registry, and audits.
 - `Package.swift`: Swift Package manifest exposing `NativeCN` and `NativeCNCatalog`.
@@ -245,6 +254,14 @@ Each registry item includes:
 - Suggested copy-paste destination
 
 See [Docs/Registry.md](Docs/Registry.md).
+
+Useful commands:
+
+```bash
+swift run NativeCNRegistry validate
+swift run NativeCNRegistry list
+swift run NativeCNRegistry plan message-scroller chart --include-docs
+```
 
 ## Documentation Map
 

@@ -29,6 +29,9 @@ final class DocumentationCatalogTests: XCTestCase {
             "Docs/Roadmap.md",
             "CONTRIBUTING.md",
             "Registry/registry.json",
+            "Registry/schemas/registry.schema.json",
+            "Registry/schemas/item.schema.json",
+            "Tools/NativeCNRegistry/main.swift",
         ]
 
         for path in requiredPaths {
