@@ -27,6 +27,27 @@ CNResourceList([
     CNResourceItem(id: "api", title: "API", subtitle: "Staging cluster", metadata: "3 alerts", systemImage: "server.rack", status: "Warning", statusVariant: .warning)
 ])
 
+CNChartContainer(title: "Revenue", subtitle: "Trailing 6 months") {
+    Chart(points) { point in
+        BarMark(
+            x: .value("Month", point.month),
+            y: .value("Revenue", point.revenue)
+        )
+    }
+} footer: {
+    CNChartLegend([
+        CNChartSeries(id: "web", title: "Web", colorIndex: 0),
+        CNChartSeries(id: "ios", title: "iOS", colorIndex: 1)
+    ])
+}
+
+CNChartContainer(
+    title: "Usage",
+    state: .empty(title: "No chart data", message: "Data appears after the first event.")
+) {
+    EmptyView()
+}
+
 CNDataTable(
     columns: [
         CNDataTableColumn(id: "name", title: "Name", minWidth: 160),
@@ -65,6 +86,12 @@ CNPagination(currentPage: $page, totalPages: 8)
 
 `CNResourceList` displays records with title, subtitle, metadata, icon, status, and row selection.
 
+`CNChartContainer` provides a tokenized frame, header, state handling, and footer slot for Apple Charts content.
+
+`CNChartLegend`, `CNChartSeries`, and `CNChartPalette` keep chart colors aligned with `CNTheme.colors.chart1...chart5`.
+
+`CNChartLoadingState` and `CNChartEmptyState` provide reusable loading, empty, and error chart surfaces.
+
 `CNTable` displays static column/row data for simple comparison tables.
 
 `CNDataTable` displays simple column/row data with horizontal scrolling on compact widths.
@@ -83,6 +110,8 @@ Status badge dots are decorative; the status text remains readable.
 
 Resource rows combine their visible text and status into one accessible row.
 
+Chart containers preserve child chart accessibility, while legends and empty/loading states expose readable labels.
+
 Table rows combine visible cell text for assistive technologies.
 
 Data table rows are selectable buttons when `onSelect` is provided and combine visible cell text for assistive technologies.
@@ -91,7 +120,7 @@ Pagination controls expose page labels, current page values, and previous/next l
 
 ## Theming
 
-Data display components read foreground, muted foreground, primary, card, border, background, radius, spacing, and typography values from `CNTheme`.
+Data display components read foreground, muted foreground, primary, card, border, background, radius, spacing, typography, and chart color values from `CNTheme`.
 
 ## API Reference
 
@@ -103,6 +132,13 @@ Data display components read foreground, muted foreground, primary, card, border
 - `CNStatusBadge(_:variant:showsDot:)`
 - `CNResourceItem(id:title:subtitle:metadata:systemImage:status:statusVariant:)`
 - `CNResourceList(_:onSelect:)`
+- `CNChartSeries(id:title:colorIndex:detail:)`
+- `CNChartState`: `ready`, `loading`, `empty(title:message:)`, `error(title:message:)`
+- `CNChartPalette.color(at:in:)`
+- `CNChartContainer(title:subtitle:state:height:content:footer:)`
+- `CNChartLegend(_:columns:)`
+- `CNChartLoadingState(height:)`
+- `CNChartEmptyState(_:message:systemImage:height:)`
 - `CNTableColumn(id:title:minWidth:alignment:)`
 - `CNTableRow(id:values:)`
 - `CNTable(columns:rows:)`
@@ -122,6 +158,8 @@ These components are pure SwiftUI and do not use UIKit or AppKit bridges.
 `CNTimeline` should be used with concise event text on compact iPhone layouts and can carry richer detail on iPad and macOS.
 
 `CNResourceList` is preferred over dense tables on iPhone because it preserves readable touch targets and native list ergonomics.
+
+`CNChartContainer` does not render marks by itself. Use Apple Charts, custom SwiftUI chart marks, or static visualizations inside the content closure.
 
 `CNTable` is a non-interactive companion to `CNDataTable` for static reference data.
 

@@ -115,6 +115,7 @@ final class RegistryTests: XCTestCase {
             "timeline",
             "status-badge",
             "resource-list",
+            "chart",
             "table",
             "data-table",
             "pagination",

@@ -79,6 +79,7 @@ final class HardeningAuditTests: XCTestCase {
             "CNScrollArea",
             "CNResizablePanels",
             "CNCarousel",
+            "CNChart",
             "CNItem",
             "CNTable",
             "CNTypography",

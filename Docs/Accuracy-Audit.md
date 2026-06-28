@@ -84,6 +84,7 @@ Lowest-fit areas:
 | CNScrollArea | 10 | 8 | 9 | Native ScrollView preserves platform scrolling while providing shadcn-style constrained viewport ownership. |
 | CNResizablePanels | 8 | 9 | 9 | Draggable split panes improve shadcn Resizable parity while staying implemented with native SwiftUI gestures. |
 | CNCarousel | 8 | 9 | 9 | Horizontal paged content improves shadcn Carousel parity while staying compatible with iOS 16/macOS 13 scrolling APIs. |
+| CNChart | 9 | 9 | 9 | Tokenized chart containers, legends, palette helpers, and states support Apple Charts without becoming a custom chart engine. |
 | CNItem | 9 | 9 | 9 | Flexible content rows improve shadcn Item parity and fit Apple settings-style surfaces well. |
 | CNTable | 9 | 9 | 9 | Static tables reuse NativeCN data-table styling for shadcn Table parity without adding unnecessary interaction. |
 | CNTypography | 10 | 8 | 9 | Semantic text styles expose theme-backed typography while keeping SwiftUI `Text` behavior intact. |

@@ -52,6 +52,20 @@ final class DataDisplayTests: XCTestCase {
         )
     }
 
+    func testChartPaletteWrapsThroughThemeChartColors() {
+        let theme = CNTheme.nativeCNLight
+        let series = CNChartSeries(id: "ios", title: "iOS", colorIndex: 6, detail: "$12k")
+
+        XCTAssertEqual(CNChartPalette.color(at: 0, in: theme), theme.colors.chart1)
+        XCTAssertEqual(CNChartPalette.color(at: 4, in: theme), theme.colors.chart5)
+        XCTAssertEqual(CNChartPalette.color(at: 5, in: theme), theme.colors.chart1)
+        XCTAssertEqual(CNChartPalette.color(at: -1, in: theme), theme.colors.chart5)
+        XCTAssertEqual(series.id, "ios")
+        XCTAssertEqual(series.title, "iOS")
+        XCTAssertEqual(series.detail, "$12k")
+        XCTAssertEqual(series.color(in: theme), theme.colors.chart2)
+    }
+
     func testDataDisplayComponentsCompileTogetherInDashboard() {
         _ = DataDisplaySmokeView()
     }
@@ -81,6 +95,27 @@ private struct DataDisplaySmokeView: View {
                     CNResourceItem(id: "ios", title: "iOS App", subtitle: "Production", metadata: "Updated today", systemImage: "iphone", status: "Healthy", statusVariant: .success),
                     CNResourceItem(id: "api", title: "API", subtitle: "Staging", metadata: "3 alerts", systemImage: "server.rack", status: "Warning", statusVariant: .warning),
                 ])
+
+                CNChartContainer(title: "Revenue", subtitle: "Trailing 6 months") {
+                    Rectangle()
+                } footer: {
+                    CNChartLegend([
+                        CNChartSeries(id: "web", title: "Web", colorIndex: 0),
+                        CNChartSeries(id: "ios", title: "iOS", colorIndex: 1),
+                    ])
+                }
+
+                CNChartContainer(title: "Loading", state: .loading) {
+                    EmptyView()
+                }
+
+                CNChartContainer(title: "Empty", state: .empty(title: "No data", message: "Events appear here.")) {
+                    EmptyView()
+                }
+
+                CNChartContainer(title: "Error", state: .error(title: "Unable to load", message: "Try again later.")) {
+                    EmptyView()
+                }
 
                 CNDataTable(
                     columns: [

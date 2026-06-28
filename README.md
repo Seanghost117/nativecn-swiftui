@@ -189,6 +189,7 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNTimeline` and `CNTimelineItem`: chronological event display.
 - `CNStatusBadge`: semantic status indicator.
 - `CNResourceList` and `CNResourceItem`: structured list rows.
+- `CNChartContainer`, `CNChartLegend`, `CNChartSeries`, and `CNChartPalette`: tokenized chart scaffolding for Apple Charts surfaces.
 - `CNTable`, `CNTableColumn`, and `CNTableRow`: static table display.
 - `CNDataTable`, `CNDataTableColumn`, and `CNDataTableRow`: selectable data table display.
 - `CNPagination`: compact pagination controls.

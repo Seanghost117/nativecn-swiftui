@@ -1,0 +1,26 @@
+{
+  "name": "chart",
+  "type": "component",
+  "title": "Chart",
+  "description": "Tokenized chart containers, legends, palette helpers, and empty/loading states for Apple Charts surfaces.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "skeleton",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Chart/CNChart.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Chart/CNChart+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Chart"
+  }
+}
+

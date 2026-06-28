@@ -71,6 +71,7 @@
     { "name": "timeline", "type": "component", "path": "Registry/components/timeline.json" },
     { "name": "status-badge", "type": "component", "path": "Registry/components/status-badge.json" },
     { "name": "resource-list", "type": "component", "path": "Registry/components/resource-list.json" },
+    { "name": "chart", "type": "component", "path": "Registry/components/chart.json" },
     { "name": "table", "type": "component", "path": "Registry/components/table.json" },
     { "name": "data-table", "type": "component", "path": "Registry/components/data-table.json" },
     { "name": "pagination", "type": "component", "path": "Registry/components/pagination.json" },

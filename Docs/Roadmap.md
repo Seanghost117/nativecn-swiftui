@@ -31,6 +31,7 @@
 - Post-hardening slice: Alert Dialog for consequential confirmation flows.
 - Post-hardening slice: Drawer for side-panel and task-panel flows.
 - Post-hardening slice: Primitive parity components, including Button Group, Input Group, Item, Table, Native Select, Direction, Typography, and stacked toasts.
+- Post-hardening slice: Chart scaffolding with tokenized containers, legends, palette helpers, and empty/loading states.
 
 ## Next
 

@@ -1,7 +1,10 @@
 import NativeCN
+import Charts
 import SwiftUI
 
 struct CatalogDataDisplayPage: View {
+    @Environment(\.cnTheme) private var theme
+
     @State private var selectedResource = "None"
     @State private var selectedTableRow = "None"
     @State private var tablePage = 2
@@ -38,6 +41,49 @@ struct CatalogDataDisplayPage: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+            }
+
+            CNSection("Charts", subtitle: "Tokenized containers and legends around Apple Charts.") {
+                VStack(spacing: 16) {
+                    CNChartContainer(title: "Revenue", subtitle: "Trailing 6 months", height: 220) {
+                        Chart(chartPoints) { point in
+                            BarMark(
+                                x: .value("Month", point.month),
+                                y: .value("Revenue", point.revenue)
+                            )
+                            .foregroundStyle(by: .value("Series", point.series))
+                            .cornerRadius(4)
+                        }
+                        .chartForegroundStyleScale([
+                            "Web": CNChartPalette.color(at: 0, in: theme).color,
+                            "iOS": CNChartPalette.color(at: 1, in: theme).color,
+                        ])
+                    } footer: {
+                        CNChartLegend([
+                            CNChartSeries(id: "web", title: "Web", colorIndex: 0, detail: "$42.8k"),
+                            CNChartSeries(id: "ios", title: "iOS", colorIndex: 1, detail: "$36.2k"),
+                        ])
+                    }
+
+                    HStack(spacing: 12) {
+                        CNChartContainer(
+                            title: "Loading",
+                            state: .loading,
+                            height: 160
+                        ) {
+                            EmptyView()
+                        }
+
+                        CNChartContainer(
+                            title: "No Data",
+                            state: .empty(title: "No chart data", message: "Data will appear when usage starts."),
+                            height: 160
+                        ) {
+                            EmptyView()
+                        }
+                    }
+                }
+                .padding(16)
             }
 
             CNSection("Resources", subtitle: "Record lists with status and metadata.") {
@@ -120,4 +166,28 @@ struct CatalogDataDisplayPage: View {
             }
         }
     }
+
+    private var chartPoints: [CatalogChartPoint] {
+        [
+            CatalogChartPoint(id: "jan-web", month: "Jan", series: "Web", revenue: 6.4),
+            CatalogChartPoint(id: "jan-ios", month: "Jan", series: "iOS", revenue: 5.1),
+            CatalogChartPoint(id: "feb-web", month: "Feb", series: "Web", revenue: 7.2),
+            CatalogChartPoint(id: "feb-ios", month: "Feb", series: "iOS", revenue: 5.8),
+            CatalogChartPoint(id: "mar-web", month: "Mar", series: "Web", revenue: 6.9),
+            CatalogChartPoint(id: "mar-ios", month: "Mar", series: "iOS", revenue: 6.3),
+            CatalogChartPoint(id: "apr-web", month: "Apr", series: "Web", revenue: 8.1),
+            CatalogChartPoint(id: "apr-ios", month: "Apr", series: "iOS", revenue: 6.7),
+            CatalogChartPoint(id: "may-web", month: "May", series: "Web", revenue: 7.9),
+            CatalogChartPoint(id: "may-ios", month: "May", series: "iOS", revenue: 5.9),
+            CatalogChartPoint(id: "jun-web", month: "Jun", series: "Web", revenue: 6.3),
+            CatalogChartPoint(id: "jun-ios", month: "Jun", series: "iOS", revenue: 6.4),
+        ]
+    }
+}
+
+private struct CatalogChartPoint: Identifiable {
+    var id: String
+    var month: String
+    var series: String
+    var revenue: Double
 }
