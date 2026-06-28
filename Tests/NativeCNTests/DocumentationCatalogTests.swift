@@ -89,6 +89,20 @@ final class DocumentationCatalogTests: XCTestCase {
         XCTAssertTrue(home.contains("CatalogChatPage"))
     }
 
+    func testDemoLabIncludesInteractiveShowcaseCoverage() throws {
+        let demoLab = try contents(of: "Examples/NativeCNCatalog/NativeCNCatalog/ComponentExamples/CatalogDemoLabPage.swift")
+
+        for component in [
+            "CNAvatar",
+            "CNSpinner",
+            "CNSkeleton",
+            "CNProgress",
+            "CNSidebar",
+        ] {
+            XCTAssertTrue(demoLab.contains(component), "Demo Lab should include \(component) coverage")
+        }
+    }
+
     func testQAPassDocumentsRequiredValidationAndManualMatrices() throws {
         let qa = try contents(of: "Docs/QA.md")
 
@@ -114,7 +128,7 @@ final class DocumentationCatalogTests: XCTestCase {
         }
 
         XCTAssertTrue(qa.contains("Chat"))
-        XCTAssertTrue(qa.contains("78 tests"))
+        XCTAssertTrue(qa.contains("79 tests"))
         XCTAssertTrue(qa.contains("78 registry items"))
     }
 

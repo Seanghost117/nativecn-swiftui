@@ -17,6 +17,7 @@ struct CatalogDemoLabPage: View {
     @State private var selectedResource = "None"
     @State private var tablePage = 1
     @State private var selectedTab = "overview"
+    @State private var selectedSidebar = "overview"
     @State private var selectedDay: Date? = Date()
     @State private var launchStart = Date()
     @State private var launchEnd = Date(timeIntervalSinceNow: 86_400 * 14)
@@ -41,6 +42,9 @@ struct CatalogDemoLabPage: View {
 
                     feedbackSection
                         .id(DemoLabSection.feedback.id)
+
+                    mediaSection
+                        .id(DemoLabSection.media.id)
 
                     dataSection
                         .id(DemoLabSection.data.id)
@@ -268,6 +272,73 @@ struct CatalogDemoLabPage: View {
         }
     }
 
+    private var mediaSection: some View {
+        CNSection("Loading & Media", subtitle: "Avatars, loading placeholders, spinners, and progress states for real app surfaces.") {
+            VStack(alignment: .leading, spacing: 18) {
+                HStack(alignment: .center, spacing: 14) {
+                    CNAvatar(fallback: "NC", size: .sm, accessibilityLabel: "NativeCN")
+                    CNAvatar(fallback: "DS", size: .md, accessibilityLabel: "Design Systems")
+                    CNAvatar(fallback: "UI", size: .lg, accessibilityLabel: "Interface preview")
+                    CNAvatar(size: .xl, accessibilityLabel: "Empty avatar placeholder")
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Avatar states")
+                            .font(theme.typography.headline.font)
+                            .foregroundStyle(theme.colors.foreground.color)
+
+                        Text("Initials, placeholder fallback, and multiple size tokens.")
+                            .font(theme.typography.subheadline.font)
+                            .foregroundStyle(theme.colors.mutedForeground.color)
+                    }
+                }
+
+                CNSeparator()
+
+                VStack(alignment: .leading, spacing: 14) {
+                    HStack(spacing: 14) {
+                        CNSkeleton(shape: .circle, size: 48, label: "Loading avatar")
+
+                        VStack(alignment: .leading, spacing: 8) {
+                            CNSkeleton(width: 180, height: 18, label: "Loading title")
+                            CNSkeleton(width: 260, height: 16, label: "Loading subtitle")
+                        }
+                    }
+
+                    CNSkeleton(width: nil, height: 18, label: "Loading full row")
+                    CNSkeleton(width: 220, height: 18, label: "Loading shorter row")
+                }
+
+                CNSeparator()
+
+                HStack(alignment: .center, spacing: 18) {
+                    HStack(spacing: 12) {
+                        CNSpinner(size: 16, label: "Small loading spinner")
+                        CNSpinner(size: 24, label: "Medium loading spinner")
+                        CNSpinner(size: 34, label: "Large loading spinner")
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Package sync")
+                                .font(theme.typography.subheadline.font.weight(.medium))
+                            Spacer()
+                            Text("\(Int((packageQuality * 100).rounded()))%")
+                                .font(theme.typography.caption.font)
+                                .foregroundStyle(theme.colors.mutedForeground.color)
+                        }
+
+                        CNProgress(value: packageQuality, label: "Package sync progress")
+                    }
+                }
+
+                CNCallout("Loading composition", message: "Combine skeletons, progress, and spinners to show both indeterminate and determinate loading paths.", variant: .info)
+            }
+            .padding(16)
+        } footer: {
+            backToContents
+        }
+    }
+
     private var dataSection: some View {
         CNSection("Data & Charts", subtitle: "Stats, tokenized chart chrome, resource lists, tables, and paging.") {
             VStack(alignment: .leading, spacing: 16) {
@@ -367,6 +438,20 @@ struct CatalogDemoLabPage: View {
     private var workflowSection: some View {
         CNSection("Workflow Shell", subtitle: "Navigation, layout, disclosure, rows, and compact product composition.") {
             VStack(alignment: .leading, spacing: 16) {
+                ViewThatFits(in: .horizontal) {
+                    HStack(alignment: .top, spacing: 16) {
+                        demoSidebar
+                            .frame(width: 245)
+
+                        sidebarDetailPane
+                    }
+
+                    VStack(alignment: .leading, spacing: 12) {
+                        demoSidebar
+                        sidebarDetailPane
+                    }
+                }
+
                 CNTabs(selection: $selectedTab, items: [
                     CNTabItem("Overview", value: "overview", systemImage: "square.grid.2x2"),
                     CNTabItem("Issues", value: "issues", systemImage: "exclamationmark.bubble"),
@@ -400,6 +485,62 @@ struct CatalogDemoLabPage: View {
         } footer: {
             backToContents
         }
+    }
+
+    private var demoSidebar: some View {
+        CNSidebar("Workspace", selection: $selectedSidebar, sections: [
+            CNSidebarSection(id: "main", title: "Main", items: [
+                CNSidebarItem("Overview", value: "overview", systemImage: "square.grid.2x2"),
+                CNSidebarItem("Components", value: "components", systemImage: "square.stack.3d.up", badge: "50"),
+                CNSidebarItem("Registry", value: "registry", systemImage: "shippingbox", badge: "78"),
+            ]),
+            CNSidebarSection(id: "review", title: "Review", items: [
+                CNSidebarItem("QA Matrix", value: "qa", systemImage: "checkmark.seal"),
+                CNSidebarItem("Releases", value: "releases", systemImage: "tag"),
+            ]),
+        ])
+    }
+
+    private var sidebarDetailPane: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                Image(systemName: sidebarIcon)
+                    .foregroundStyle(theme.colors.primary.color)
+                    .frame(width: 22)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(sidebarTitle)
+                        .font(theme.typography.headline.font)
+                        .foregroundStyle(theme.colors.foreground.color)
+
+                    Text("Selected sidebar value: \(selectedSidebar)")
+                        .font(theme.typography.caption.font)
+                        .foregroundStyle(theme.colors.mutedForeground.color)
+                }
+
+                Spacer()
+
+                CNBadge("Live", variant: .secondary)
+            }
+
+            CNSeparator()
+
+            Text(sidebarDetail)
+                .font(theme.typography.subheadline.font)
+                .foregroundStyle(theme.colors.mutedForeground.color)
+                .fixedSize(horizontal: false, vertical: true)
+
+            CNDescriptionList([
+                CNDescriptionItem(id: "surface", label: "Surface", value: sidebarTitle),
+                CNDescriptionItem(id: "pattern", label: "Pattern", value: "Sidebar + detail pane"),
+                CNDescriptionItem(id: "state", label: "State", value: selectedSidebar),
+            ])
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(theme.colors.background.color)
+        .clipShape(RoundedRectangle(cornerRadius: theme.radius.lg))
+        .cnBorder(color: theme.colors.border, cornerRadius: theme.radius.lg)
     }
 
     private var calendarSection: some View {
@@ -465,9 +606,55 @@ struct CatalogDemoLabPage: View {
             DemoChartPoint(id: "foundation", area: "Foundation", count: 9, colorIndex: 0),
             DemoChartPoint(id: "controls", area: "Controls", count: 16, colorIndex: 1),
             DemoChartPoint(id: "feedback", area: "Feedback", count: 12, colorIndex: 2),
-            DemoChartPoint(id: "data", area: "Data", count: 10, colorIndex: 3),
-            DemoChartPoint(id: "chat", area: "Chat", count: 5, colorIndex: 4),
+            DemoChartPoint(id: "media", area: "Media", count: 8, colorIndex: 3),
+            DemoChartPoint(id: "data", area: "Data", count: 10, colorIndex: 4),
+            DemoChartPoint(id: "chat", area: "Chat", count: 5, colorIndex: 0),
         ]
+    }
+
+    private var sidebarTitle: String {
+        switch selectedSidebar {
+        case "components":
+            return "Components"
+        case "registry":
+            return "Registry"
+        case "qa":
+            return "QA Matrix"
+        case "releases":
+            return "Releases"
+        default:
+            return "Overview"
+        }
+    }
+
+    private var sidebarIcon: String {
+        switch selectedSidebar {
+        case "components":
+            return "square.stack.3d.up"
+        case "registry":
+            return "shippingbox"
+        case "qa":
+            return "checkmark.seal"
+        case "releases":
+            return "tag"
+        default:
+            return "square.grid.2x2"
+        }
+    }
+
+    private var sidebarDetail: String {
+        switch selectedSidebar {
+        case "components":
+            return "Browse the current SwiftUI component families and confirm they behave inside real layout constraints."
+        case "registry":
+            return "Review source ownership metadata, dependency coverage, and install-oriented package details."
+        case "qa":
+            return "Use the visual matrix to review theme, Dynamic Type, compact width, and interaction behavior."
+        case "releases":
+            return "Check notes, tags, and release readiness before publishing the next public build."
+        default:
+            return "Start with the main package status before jumping into specific catalog categories."
+        }
     }
 }
 
@@ -475,6 +662,7 @@ private enum DemoLabSection: String, CaseIterable, Identifiable {
     case foundation
     case controls
     case feedback
+    case media
     case data
     case content
     case workflow
@@ -491,6 +679,8 @@ private enum DemoLabSection: String, CaseIterable, Identifiable {
             return "Controls"
         case .feedback:
             return "Feedback"
+        case .media:
+            return "Loading & Media"
         case .data:
             return "Data & Charts"
         case .content:
@@ -512,6 +702,8 @@ private enum DemoLabSection: String, CaseIterable, Identifiable {
             return "Inputs, selects, toggles, and sliders."
         case .feedback:
             return "Alerts, menus, progress, and toasts."
+        case .media:
+            return "Avatars, spinners, skeletons, and progress."
         case .data:
             return "Stats, charts, resources, and tables."
         case .content:
@@ -533,6 +725,8 @@ private enum DemoLabSection: String, CaseIterable, Identifiable {
             return "slider.horizontal.3"
         case .feedback:
             return "exclamationmark.bubble"
+        case .media:
+            return "person.crop.circle.badge.clock"
         case .data:
             return "chart.bar"
         case .content:
@@ -554,6 +748,8 @@ private enum DemoLabSection: String, CaseIterable, Identifiable {
             return "8 demos"
         case .feedback:
             return "6 demos"
+        case .media:
+            return "8 demos"
         case .data:
             return "5 demos"
         case .content:
