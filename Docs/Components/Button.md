@@ -2,6 +2,8 @@
 
 `CNButton` is a token-driven SwiftUI button with variants, sizes, loading state, disabled state, and custom label content.
 
+`CNButtonGroup` groups related actions into a compact control cluster.
+
 ## Import And Setup
 
 ```swift
@@ -69,6 +71,16 @@ CNCardFooter {
 }
 ```
 
+## Button Group
+
+```swift
+CNButtonGroup {
+    CNButton("Preview", variant: .outline, size: .sm) {}
+    CNButton("Share", variant: .outline, size: .sm) {}
+    CNButton("Publish", size: .sm) {}
+}
+```
+
 ## Accessibility
 
 Icon-only buttons should include an accessibility label. Loading buttons are disabled while loading to avoid duplicate taps.
@@ -83,6 +95,8 @@ Button variants resolve through `CNTheme.colors`: primary, secondary, destructiv
 - `CNButton(variant:size:role:isLoading:isDisabled:loadingLabel:action:label:)`
 - `CNButton.Variant`: `primary`, `secondary`, `destructive`, `outline`, `ghost`, `link`
 - `CNButton.Size`: `sm`, `md`, `lg`, `icon`
+- `CNButtonGroup(orientation:content:)`
+- `CNButtonGroup.Orientation`: `horizontal`, `vertical`
 
 ## Platform Differences
 

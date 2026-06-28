@@ -1,0 +1,24 @@
+{
+  "name": "typography",
+  "type": "component",
+  "title": "Typography",
+  "description": "Semantic text styles backed by NativeCN typography and color tokens.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Typography/CNTypography.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Typography/CNTypography+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Content.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Typography"
+  }
+}
+

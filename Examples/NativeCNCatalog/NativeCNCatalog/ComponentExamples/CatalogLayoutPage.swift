@@ -14,6 +14,18 @@ struct CatalogLayoutPage: View {
                 CNButton("New", size: .sm) {}
             }
 
+            CNSection("Items", subtitle: "Flexible rows for static settings and command surfaces.") {
+                VStack(spacing: 10) {
+                    CNItem("Billing", subtitle: "Invoices and payment methods", systemImage: "creditcard")
+                    CNItem("Access", subtitle: "Members, roles, and invitations") {
+                        Image(systemName: "person.2")
+                    } trailing: {
+                        CNStatusBadge("Team", variant: .success)
+                    }
+                }
+                .padding(16)
+            }
+
             CNSection("Account", subtitle: "Settings-style grouped rows.") {
                 CNListRow("Profile", subtitle: "Name, avatar, and handle", systemImage: "person.crop.circle") {
                     selectedRow = "Profile"
@@ -150,6 +162,19 @@ struct CatalogLayoutPage: View {
                 }
                 .frame(height: 220)
                 .cnBorder(cornerRadius: 12)
+                .padding(16)
+            }
+
+            CNSection("Direction", subtitle: "Mirror layout direction for localized surfaces.") {
+                VStack(spacing: 12) {
+                    CNDirectionProvider(.ltr) {
+                        CNItem("Left to right", subtitle: "Leading content starts on the left", systemImage: "arrow.right")
+                    }
+
+                    CNDirectionProvider(.rtl) {
+                        CNItem("Right to left", subtitle: "Leading content follows the layout direction", systemImage: "arrow.left")
+                    }
+                }
                 .padding(16)
             }
 

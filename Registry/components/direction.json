@@ -1,0 +1,24 @@
+{
+  "name": "direction",
+  "type": "component",
+  "title": "Direction",
+  "description": "A layout direction provider and view modifier for left-to-right and right-to-left interfaces.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Direction/CNDirection.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Direction/CNDirection+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Direction"
+  }
+}
+

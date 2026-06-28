@@ -30,6 +30,7 @@
 - Post-hardening slice: Input OTP for verification-code flows.
 - Post-hardening slice: Alert Dialog for consequential confirmation flows.
 - Post-hardening slice: Drawer for side-panel and task-panel flows.
+- Post-hardening slice: Primitive parity components, including Button Group, Input Group, Item, Table, Native Select, Direction, Typography, and stacked toasts.
 
 ## Next
 

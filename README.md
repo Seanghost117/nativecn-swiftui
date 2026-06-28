@@ -124,6 +124,7 @@ The repository also contains a generated local macOS app bundle during developme
 ### MVP And Basic UI
 
 - `CNButton`: token-driven button with variants, sizes, roles, and loading state.
+- `CNButtonGroup`: compact grouping for related button actions.
 - `CNBadge`: compact status and label badge.
 - `CNCard`, `CNCardHeader`, `CNCardTitle`, `CNCardDescription`, `CNCardContent`, `CNCardFooter`: grouped content surfaces.
 - `CNSeparator`: horizontal or vertical divider.
@@ -134,6 +135,7 @@ The repository also contains a generated local macOS app bundle during developme
 ### Forms And Controls
 
 - `CNTextarea`: multiline editing with min/max height and invalid state.
+- `CNInputGroup`: single-line input with leading and trailing add-ons.
 - `CNInputOTP`: slot-based one-time-code input.
 - `CNSwitch`: native switch with NativeCN tint.
 - `CNToggle`: button-like boolean toggle.
@@ -142,6 +144,7 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNCheckbox`: tokenized checkbox.
 - `CNRadioGroup`: single-selection radio group with descriptions.
 - `CNSelect`: native menu-backed select.
+- `CNNativeSelect`: SwiftUI Picker-backed select for platform-default presentation.
 - `CNCombobox`: searchable select using native popover presentation.
 
 ### Feedback And Overlays
@@ -151,7 +154,7 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNAlertDialog`: purpose-built consequential confirmation dialog.
 - `CNSheet` / `.cnSheet(...)`: native sheet content wrapper.
 - `CNDrawer` / `.cnDrawer(...)`: side-panel and task-panel overlay.
-- `CNToast`, `CNToastView`, and `.cnToast(...)`: transient feedback.
+- `CNToast`, `CNToastView`, `.cnToast(...)`, `CNToaster`, and `.cnToaster(...)`: transient feedback and stacked notifications.
 - `CNPopover` / `.cnPopover(...)`: native popover wrapper.
 - `CNTooltip` / `.cnTooltip(...)`: compact contextual help.
 - `CNHoverCard` / `.cnHoverCard(...)`: richer hover or tap preview surface.
@@ -162,12 +165,14 @@ The repository also contains a generated local macOS app bundle during developme
 
 - `CNPageHeader`: page title, subtitle, and trailing actions.
 - `CNSection`: grouped content section with heading, subtitle, and footer.
+- `CNItem`: flexible row for static settings, command, and menu-like content.
 - `CNListRow`: settings-style row with leading/trailing content.
 - `CNEmptyState`: centered empty-state layout.
 - `CNAspectRatio`: fixed-ratio media and preview frame.
 - `CNScrollArea`: constrained native scroll viewport.
 - `CNResizablePanels`: two-pane resizable workspace layout.
 - `CNCarousel`: horizontally paged custom content with controls and indicators.
+- `CNDirectionProvider` and `.cnDirection(...)`: left-to-right and right-to-left layout direction helpers.
 
 ### Navigation
 
@@ -183,8 +188,9 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNDescriptionList` and `CNDescriptionItem`: key-value detail lists.
 - `CNTimeline` and `CNTimelineItem`: chronological event display.
 - `CNStatusBadge`: semantic status indicator.
-- `CNResourceList` and `CNResourceListItem`: structured list rows.
-- `CNDataTable`, `CNDataColumn`, and `CNDataCell`: table display.
+- `CNResourceList` and `CNResourceItem`: structured list rows.
+- `CNTable`, `CNTableColumn`, and `CNTableRow`: static table display.
+- `CNDataTable`, `CNDataTableColumn`, and `CNDataTableRow`: selectable data table display.
 - `CNPagination`: compact pagination controls.
 
 ### Content
@@ -194,6 +200,7 @@ The repository also contains a generated local macOS app bundle during developme
 - `CNCodeBlock`: scrollable code block with optional copy affordance.
 - `CNInlineCode`: inline code text styling.
 - `CNKeyboardShortcut`: keyboard shortcut keycap display.
+- `CNTypography` and `CNTypographyStyle`: semantic text styles backed by theme tokens.
 
 ### Interaction
 

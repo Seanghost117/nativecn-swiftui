@@ -1,0 +1,26 @@
+{
+  "name": "table",
+  "type": "component",
+  "title": "Table",
+  "description": "A non-interactive table for compact text datasets.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "separator",
+    "data-table"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Table/CNTable.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Table/CNTable+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/DataDisplay.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Table"
+  }
+}
+

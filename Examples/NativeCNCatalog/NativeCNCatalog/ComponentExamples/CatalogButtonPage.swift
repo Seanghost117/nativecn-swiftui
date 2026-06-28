@@ -41,6 +41,28 @@ struct CatalogButtonPage: View {
                 }
             }
 
+            CNCard {
+                CNCardHeader {
+                    CNCardTitle("Button Group")
+                    CNCardDescription("Related actions arranged as a compact cluster.")
+                }
+
+                CNCardContent {
+                    VStack(alignment: .leading, spacing: 12) {
+                        CNButtonGroup {
+                            CNButton("Preview", variant: .outline, size: .sm) {}
+                            CNButton("Share", variant: .outline, size: .sm) {}
+                            CNButton("Publish", size: .sm) {}
+                        }
+
+                        CNButtonGroup(orientation: .vertical) {
+                            CNButton("Duplicate", variant: .ghost, size: .sm) {}
+                            CNButton("Archive", variant: .ghost, size: .sm) {}
+                        }
+                    }
+                }
+            }
+
             CNPreviewMatrix("States") { state in
                 CNButton(
                     state.name,

@@ -10,6 +10,7 @@ CNPageHeader("Projects", subtitle: "Track active client work.") {
 }
 
 CNSection("Account", subtitle: "Manage profile settings.") {
+    CNItem("Billing", subtitle: "Invoices and payment methods", systemImage: "creditcard")
     CNListRow("Profile", subtitle: "Name and avatar", systemImage: "person.crop.circle") {}
     CNSeparator()
     CNListRow("Notifications") {
@@ -53,6 +54,10 @@ CNCarousel(items: features, selection: $selectedFeature, itemWidth: 250) { featu
         }
     }
 }
+
+CNDirectionProvider(.rtl) {
+    CNItem("Arabic layout", subtitle: "Mirrors leading and trailing content", systemImage: "textformat")
+}
 ```
 
 ## Components
@@ -60,6 +65,8 @@ CNCarousel(items: features, selection: $selectedFeature, itemWidth: 250) { featu
 `CNPageHeader` creates a page-level title area with optional subtitle and trailing actions.
 
 `CNSection` groups related content in a token-driven surface with optional heading, subtitle, and footer.
+
+`CNItem` creates a flexible non-action row for settings, command, and menu-like content.
 
 `CNListRow` creates compact settings and menu rows with optional leading content, trailing content, and row action.
 
@@ -73,6 +80,8 @@ CNCarousel(items: features, selection: $selectedFeature, itemWidth: 250) { featu
 
 `CNCarousel` displays horizontally paged custom content with previous/next controls and indicators.
 
+`CNDirectionProvider` and `.cnDirection(_:)` apply left-to-right or right-to-left layout direction to a subtree.
+
 ## Accessibility
 
 Page and section titles are marked as headers.
@@ -80,6 +89,8 @@ Page and section titles are marked as headers.
 Decorative empty-state icons are hidden from accessibility.
 
 Rows combine their title, subtitle, leading content, and trailing content into one accessible element.
+
+Items combine title, subtitle, leading content, and trailing content into one accessible element.
 
 Action rows use native SwiftUI `Button` behavior with `.plain` styling.
 
@@ -91,6 +102,8 @@ Scroll areas keep native SwiftUI scrolling behavior and child accessibility sema
 
 Resizable panel handles expose an accessible resize control and keep panel content semantics intact.
 
+Direction providers use SwiftUI's native layout direction environment.
+
 ## Theming
 
 Layout components read typography, foreground, muted foreground, card, border, spacing, and radius values from `CNTheme`.
@@ -99,6 +112,8 @@ Layout components read typography, foreground, muted foreground, card, border, s
 
 - `CNPageHeader(_:subtitle:actions:)`
 - `CNSection(_:subtitle:content:footer:)`
+- `CNItem(_:subtitle:isDisabled:leading:trailing:)`
+- `CNItem(_:subtitle:systemImage:isDisabled:)`
 - `CNListRow(_:subtitle:action:leading:trailing:)`
 - `CNListRow(_:subtitle:systemImage:action:)`
 - `CNEmptyState(_:message:systemImage:actions:)`
@@ -116,6 +131,9 @@ Layout components read typography, foreground, muted foreground, card, border, s
 - `CNCarousel.index(of:in:)`
 - `CNCarousel.previousID(before:in:)`
 - `CNCarousel.nextID(after:in:)`
+- `CNDirectionProvider(_:content:)`
+- `.cnDirection(_:)`
+- `CNDirection`: `ltr`, `rtl`
 
 ## Platform Differences
 
@@ -130,3 +148,5 @@ On macOS and iPadOS, they work well inside wider split views and inspector-style
 `CNScrollArea` is backed by native `ScrollView`, so scrolling physics and indicator behavior follow the host platform.
 
 `CNResizablePanels` uses SwiftUI gestures and works best in wider iPadOS and macOS layouts where there is enough room for adjacent panes.
+
+`CNDirectionProvider` maps directly to SwiftUI `layoutDirection`, so mirroring follows host platform behavior.

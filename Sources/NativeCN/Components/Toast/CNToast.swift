@@ -157,10 +157,79 @@ public struct CNToastPresenter<Content: View>: View {
     }
 }
 
+/// A toast presenter that overlays a stack of NativeCN toasts.
+public struct CNToaster<Content: View>: View {
+    @Environment(\.cnTheme) private var theme
+
+    private let toasts: Binding<[CNToast]>
+    private let placement: CNToast.Placement
+    private let maxVisible: Int
+    private let content: Content
+
+    /// Creates a toast stack presenter.
+    public init(
+        toasts: Binding<[CNToast]>,
+        placement: CNToast.Placement = .bottom,
+        maxVisible: Int = 3,
+        @ViewBuilder content: () -> Content
+    ) {
+        self.toasts = toasts
+        self.placement = placement
+        self.maxVisible = max(1, maxVisible)
+        self.content = content()
+    }
+
+    /// The presenter body.
+    public var body: some View {
+        ZStack {
+            content
+
+            VStack {
+                if placement == .bottom {
+                    Spacer()
+                }
+
+                toastStack
+                    .padding(theme.space.x4)
+
+                if placement == .top {
+                    Spacer()
+                }
+            }
+        }
+    }
+
+    private var visibleToasts: [CNToast] {
+        Array(toasts.wrappedValue.suffix(maxVisible))
+    }
+
+    private var toastStack: some View {
+        VStack(spacing: theme.space.x3) {
+            ForEach(visibleToasts) { toast in
+                CNToastView(toast) {
+                    dismiss(toast)
+                }
+                .transition(.move(edge: placement == .top ? .top : .bottom).combined(with: .opacity))
+            }
+        }
+    }
+
+    private func dismiss(_ toast: CNToast) {
+        toasts.wrappedValue.removeAll { $0.id == toast.id }
+    }
+}
+
 public extension View {
     /// Presents a NativeCN toast over this view.
     func cnToast(_ toast: Binding<CNToast?>) -> some View {
         CNToastPresenter(toast: toast) {
+            self
+        }
+    }
+
+    /// Presents a stack of NativeCN toasts over this view.
+    func cnToaster(_ toasts: Binding<[CNToast]>, placement: CNToast.Placement = .bottom, maxVisible: Int = 3) -> some View {
+        CNToaster(toasts: toasts, placement: placement, maxVisible: maxVisible) {
             self
         }
     }

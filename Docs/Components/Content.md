@@ -26,6 +26,9 @@ HStack {
 }
 
 CNKeyboardShortcut("Command", "K")
+
+CNTypography("Component library", style: .title)
+CNTypography("Muted supporting text", style: .muted)
 ```
 
 ## Components
@@ -40,6 +43,8 @@ CNKeyboardShortcut("Command", "K")
 
 `CNKeyboardShortcut` displays one or more keycaps for command palettes, menus, and shortcut hints.
 
+`CNTypography` displays semantic text styles backed by NativeCN typography and color tokens.
+
 ## Accessibility
 
 Callout icons are decorative and hidden from accessibility.
@@ -49,6 +54,8 @@ Notes combine title and body content into one readable element.
 Code blocks allow text selection, keep a visible title or language label, and expose a copy action when enabled.
 
 Inline code reads as plain text. Keyboard shortcuts combine their keys into one accessible element.
+
+Typography uses native SwiftUI text semantics.
 
 ## Theming
 
@@ -63,6 +70,8 @@ Content components read foreground, muted foreground, card, muted, border, radiu
 - `CNInlineCode(_:)`
 - `CNKeyboardShortcut(_:)`
 - `CNKeyboardShortcut(_ keys: [String])`
+- `CNTypography(_:style:)`
+- `CNTypographyStyle`: `title`, `heading`, `body`, `muted`, `caption`
 
 ## Platform Differences
 

@@ -11,7 +11,10 @@ struct CatalogFormsControlsPage: View {
     @State private var accepted = false
     @State private var plan = "pro"
     @State private var role: String? = "editor"
+    @State private var nativeRole = "editor"
     @State private var team: String? = "design"
+    @State private var workspace = "nativecn"
+    @State private var price = "49"
 
     var body: some View {
         CatalogPage(
@@ -49,6 +52,18 @@ struct CatalogFormsControlsPage: View {
                             )
                         }
 
+                        CNField(label: "Native role", description: "Picker-backed native presentation.") {
+                            CNNativeSelect(
+                                "Native role",
+                                selection: $nativeRole,
+                                options: [
+                                    CNSelectOption("Admin", value: "admin"),
+                                    CNSelectOption("Editor", value: "editor"),
+                                    CNSelectOption("Viewer", value: "viewer"),
+                                ]
+                            )
+                        }
+
                         CNField(label: "Team", description: "Searchable selection for larger option sets.") {
                             CNCombobox(
                                 "Team",
@@ -62,6 +77,20 @@ struct CatalogFormsControlsPage: View {
                                 searchPlaceholder: "Search teams"
                             )
                         }
+                    }
+                }
+            }
+
+            CNCard {
+                CNCardHeader {
+                    CNCardTitle("Input Group")
+                    CNCardDescription("Inputs with compact add-ons for URLs, currency, and units.")
+                }
+
+                CNCardContent {
+                    VStack(alignment: .leading, spacing: 14) {
+                        CNInputGroup("workspace", text: $workspace, trailingText: ".app")
+                        CNInputGroup("Price", text: $price, leadingText: "$")
                     }
                 }
             }

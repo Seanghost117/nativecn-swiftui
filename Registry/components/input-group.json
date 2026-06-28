@@ -1,0 +1,25 @@
+{
+  "name": "input-group",
+  "type": "component",
+  "title": "Input Group",
+  "description": "A single-line input with tokenized leading and trailing add-ons.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/InputGroup/CNInputGroup.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/InputGroup/CNInputGroup+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/InputGroup"
+  }
+}
+

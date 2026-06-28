@@ -55,6 +55,17 @@ struct CatalogContentPage: View {
                 }
                 .padding(16)
             }
+
+            CNSection("Typography", subtitle: "Semantic text styles backed by theme tokens.") {
+                VStack(alignment: .leading, spacing: 10) {
+                    CNTypography("NativeCN", style: .title)
+                    CNTypography("Composable SwiftUI components", style: .heading)
+                    CNTypography("Use semantic text styles for product hierarchy.", style: .body)
+                    CNTypography("Muted copy supports metadata and helper text.", style: .muted)
+                    CNTypography("Caption", style: .caption)
+                }
+                .padding(16)
+            }
         }
     }
 }

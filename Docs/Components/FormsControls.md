@@ -1,6 +1,6 @@
 # Forms And Controls
 
-Phase 6 adds `CNTextarea`, `CNInputOTP`, `CNSwitch`, `CNToggle`, `CNToggleGroup`, `CNSlider`, `CNCheckbox`, `CNRadioGroup`, `CNSelect`, and `CNCombobox`.
+Phase 6 adds `CNTextarea`, `CNInputGroup`, `CNInputOTP`, `CNSwitch`, `CNToggle`, `CNToggleGroup`, `CNSlider`, `CNCheckbox`, `CNRadioGroup`, `CNSelect`, `CNNativeSelect`, and `CNCombobox`.
 
 ## Import And Setup
 
@@ -22,6 +22,18 @@ CNField(label: "Message", description: "Add context.") {
 ```
 
 `CNTextarea` supports placeholder text, invalid state through `CNField`, disabled state, focus binding, and min/max height.
+
+## Input Group
+
+```swift
+@State private var workspace = "nativecn"
+
+CNField(label: "Workspace URL") {
+    CNInputGroup("workspace", text: $workspace, trailingText: ".app")
+}
+```
+
+`CNInputGroup` provides leading and trailing add-ons for currency, URLs, units, and compact search controls.
 
 ## Input OTP
 
@@ -119,6 +131,24 @@ CNSelect(
 
 `CNSelect` is a first-pass native select backed by SwiftUI `Menu`.
 
+## Native Select
+
+```swift
+@State private var role = "editor"
+
+CNNativeSelect(
+    "Role",
+    selection: $role,
+    options: [
+        CNSelectOption("Admin", value: "admin"),
+        CNSelectOption("Editor", value: "editor"),
+        CNSelectOption("Viewer", value: "viewer")
+    ]
+)
+```
+
+`CNNativeSelect` uses SwiftUI `Picker` for cases where the platform-default menu control is preferred over the tokenized `CNSelect` trigger.
+
 ## Combobox
 
 ```swift
@@ -169,6 +199,9 @@ Forms and controls use primary, background, foreground, muted, muted foreground,
 ## API Reference
 
 - `CNTextarea(_:text:minHeight:maxHeight:isDisabled:isInvalid:focus:)`
+- `CNInputGroup(_:text:isDisabled:isInvalid:leading:trailing:)`
+- `CNInputGroup(_:text:leadingText:isDisabled:isInvalid:)`
+- `CNInputGroup(_:text:trailingText:isDisabled:isInvalid:)`
 - `CNInputOTP(text:length:groupSize:label:isDisabled:isInvalid:)`
 - `CNInputOTP.sanitized(_:length:)`
 - `CNInputOTP.normalizedLength(_:)`
@@ -183,6 +216,7 @@ Forms and controls use primary, background, foreground, muted, muted foreground,
 - `CNRadioOption(_:value:description:)`
 - `CNSelect(_:selection:options:isDisabled:)`
 - `CNSelectOption(_:value:)`
+- `CNNativeSelect(_:selection:options:isDisabled:)`
 - `CNCombobox(_:selection:options:searchPlaceholder:emptyTitle:isDisabled:)`
 - `CNComboboxOption(_:value:subtitle:systemImage:keywords:)`
 - `CNComboboxOption.matches(_:)`

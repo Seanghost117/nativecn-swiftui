@@ -8,6 +8,7 @@ struct CatalogFeedbackOverlaysPage: View {
     @State private var sheetPresented = false
     @State private var popoverPresented = false
     @State private var toast: CNToast?
+    @State private var toasts: [CNToast] = []
     @State private var selectedAction = "None"
     @State private var selectedCommand = "None"
 
@@ -59,6 +60,10 @@ struct CatalogFeedbackOverlaysPage: View {
 
                             CNButton("Toast", variant: .outline) {
                                 toast = CNToast(title: "Saved", message: "Settings were updated.", variant: .success)
+                            }
+
+                            CNButton("Toaster", variant: .outline) {
+                                toasts.append(CNToast(title: "Queued toast", message: "Multiple notifications can stack.", variant: .default))
                             }
                         }
 
@@ -149,6 +154,7 @@ struct CatalogFeedbackOverlaysPage: View {
             }
         }
         .cnToast($toast)
+        .cnToaster($toasts, maxVisible: 3)
         .cnDialog(isPresented: $dialogPresented) {
             CNDialog(title: "Discard changes?", message: "This action cannot be undone.") {
                 CNButton("Cancel", variant: .outline) {

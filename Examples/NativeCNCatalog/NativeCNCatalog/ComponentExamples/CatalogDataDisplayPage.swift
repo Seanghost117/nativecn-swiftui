@@ -94,6 +94,22 @@ struct CatalogDataDisplayPage: View {
                 }
             }
 
+            CNSection("Table", subtitle: "Static reference tables with the same visual system.") {
+                CNTable(
+                    columns: [
+                        CNTableColumn(id: "component", title: "Component", minWidth: 160),
+                        CNTableColumn(id: "area", title: "Area", minWidth: 130),
+                        CNTableColumn(id: "status", title: "Status", minWidth: 120),
+                    ],
+                    rows: [
+                        CNTableRow(id: "button-group", values: ["component": "Button Group", "area": "Actions", "status": "Stable"]),
+                        CNTableRow(id: "input-group", values: ["component": "Input Group", "area": "Forms", "status": "Stable"]),
+                        CNTableRow(id: "typography", values: ["component": "Typography", "area": "Content", "status": "Stable"]),
+                    ]
+                )
+                .padding(16)
+            }
+
             CNSection("Activity", subtitle: "A timeline for recent events.") {
                 CNTimeline([
                     CNTimelineItem(id: "created", title: "Project created", detail: "NativeCN workspace initialized.", timestamp: "9:12 AM", systemImage: "plus"),

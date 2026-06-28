@@ -1,0 +1,25 @@
+{
+  "name": "item",
+  "type": "component",
+  "title": "Item",
+  "description": "A flexible row for settings, command, and menu-like content.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "primitives"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/Item/CNItem.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/Item/CNItem+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Layout.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/Item"
+  }
+}
+

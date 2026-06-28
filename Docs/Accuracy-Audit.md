@@ -35,12 +35,14 @@ Lowest-fit areas:
 | Primitives | 8 | 9 | 9 | Size, state, focus, border, loading, platform, and preview helpers map well to both systems. |
 | Registry | 7 | 10 | 9 | Very true to shadcn copy-paste ownership; Apple fidelity is lower because registry metadata is outside normal Apple SDK workflows. |
 | CNButton | 9 | 10 | 10 | Native `Button`, shadcn variants, sizes, loading state, and token-driven styling are well aligned. |
+| CNButtonGroup | 9 | 9 | 9 | Compact action grouping improves shadcn Button Group parity while keeping ordinary NativeCN button semantics. |
 | CNBadge | 8 | 10 | 9 | Strong shadcn parity with good SwiftUI implementation; Apple has no exact native badge equivalent. |
 | CNCard | 9 | 10 | 10 | Composable content sections feel natural in SwiftUI and match shadcn card structure. |
 | CNSeparator | 9 | 9 | 9 | Minimal, semantic, token-driven divider with native accessibility hiding. |
 | CNLabel | 9 | 8 | 9 | Simple form label maps cleanly to Apple forms and shadcn field composition. |
 | CNField | 9 | 9 | 9 | Good Apple form semantics and shadcn-style field scaffolding. |
 | CNInput | 9 | 9 | 9 | Uses native `TextField` editing while providing shadcn-style invalid and accessory states. |
+| CNInputGroup | 8 | 9 | 9 | Add-on input styling closes shadcn Input Group parity while preserving native text editing. |
 | CNInputOTP | 8 | 9 | 9 | Slot-based code entry improves shadcn Input OTP parity while preserving native text entry and paste behavior. |
 | CNAvatar | 9 | 9 | 9 | Familiar Apple profile imagery with shadcn-like fallback and sizing. |
 | CNSkeleton | 8 | 10 | 9 | Strong shadcn loading pattern; Reduce Motion support keeps it Apple-respectful. |
@@ -54,6 +56,7 @@ Lowest-fit areas:
 | CNCheckbox | 7 | 9 | 8 | Useful for cross-platform forms but needs careful touch target and VoiceOver QA to feel fully Apple-native. |
 | CNRadioGroup | 7 | 9 | 8 | Valuable for shadcn parity; Apple apps often use lists, pickers, or segmented controls instead. |
 | CNSelect | 9 | 8 | 9 | Menu-backed native behavior is the right Apple adaptation of shadcn Select. |
+| CNNativeSelect | 10 | 8 | 9 | Picker-backed presentation favors platform behavior while keeping registry-level parity for Native Select. |
 | CNCombobox | 8 | 9 | 9 | Searchable selection improves shadcn Combobox parity while staying backed by native popover and text input behavior. |
 | CNAlert | 8 | 9 | 8 | Inline feedback surface matches shadcn Alert; name requires docs because Apple `Alert` means modal system alert. |
 | CNDialog | 7 | 9 | 8 | Good confirm-flow structure, but custom modals need more focus, dismissal, and platform polish. |
@@ -66,6 +69,7 @@ Lowest-fit areas:
 | CNHoverCard | 9 | 8 | 9 | Pointer hover preview behavior fits macOS and iPad well, while tap fallback keeps touch layouts usable. |
 | CNDropdownMenu | 10 | 8 | 9 | Native `Menu` behavior is the right Apple adaptation of shadcn dropdown menus. |
 | CNMenubar | 9 | 8 | 9 | Compact command menus are strongest on macOS while remaining usable as native menu triggers on touch platforms. |
+| CNDirection | 10 | 8 | 9 | Direction maps directly to SwiftUI layout direction while adding a named registry item for shadcn Direction parity. |
 | CNNavigationMenu | 9 | 8 | 9 | Top-level navigation with native menu-backed children is a strong Apple adaptation of shadcn Navigation Menu. |
 | CNSidebar | 9 | 8 | 9 | Grouped app-shell navigation fits Apple split-view expectations while keeping shadcn-style source ownership and token styling. |
 | CNAccordion | 9 | 9 | 9 | Disclosure-driven progressive content maps well to both shadcn Accordion and native SwiftUI interaction expectations. |
@@ -80,6 +84,9 @@ Lowest-fit areas:
 | CNScrollArea | 10 | 8 | 9 | Native ScrollView preserves platform scrolling while providing shadcn-style constrained viewport ownership. |
 | CNResizablePanels | 8 | 9 | 9 | Draggable split panes improve shadcn Resizable parity while staying implemented with native SwiftUI gestures. |
 | CNCarousel | 8 | 9 | 9 | Horizontal paged content improves shadcn Carousel parity while staying compatible with iOS 16/macOS 13 scrolling APIs. |
+| CNItem | 9 | 9 | 9 | Flexible content rows improve shadcn Item parity and fit Apple settings-style surfaces well. |
+| CNTable | 9 | 9 | 9 | Static tables reuse NativeCN data-table styling for shadcn Table parity without adding unnecessary interaction. |
+| CNTypography | 10 | 8 | 9 | Semantic text styles expose theme-backed typography while keeping SwiftUI `Text` behavior intact. |
 
 ## Accuracy Notes
 

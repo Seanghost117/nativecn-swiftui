@@ -1,0 +1,25 @@
+{
+  "name": "native-select",
+  "type": "component",
+  "title": "Native Select",
+  "description": "A SwiftUI Picker-backed select that preserves native platform presentation.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "select"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/NativeSelect/CNNativeSelect.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/NativeSelect/CNNativeSelect+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/FormsControls.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/NativeSelect"
+  }
+}
+

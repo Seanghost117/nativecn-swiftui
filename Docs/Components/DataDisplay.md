@@ -39,6 +39,17 @@ CNDataTable(
     ]
 )
 
+CNTable(
+    columns: [
+        CNTableColumn(id: "name", title: "Name"),
+        CNTableColumn(id: "status", title: "Status")
+    ],
+    rows: [
+        CNTableRow(id: "ios", values: ["name": "iOS App", "status": "Healthy"]),
+        CNTableRow(id: "api", values: ["name": "API", "status": "Warning"])
+    ]
+)
+
 CNPagination(currentPage: $page, totalPages: 8)
 ```
 
@@ -53,6 +64,8 @@ CNPagination(currentPage: $page, totalPages: 8)
 `CNStatusBadge` displays semantic record status with an optional dot.
 
 `CNResourceList` displays records with title, subtitle, metadata, icon, status, and row selection.
+
+`CNTable` displays static column/row data for simple comparison tables.
 
 `CNDataTable` displays simple column/row data with horizontal scrolling on compact widths.
 
@@ -69,6 +82,8 @@ Timeline event icons are decorative and hidden from accessibility; event title, 
 Status badge dots are decorative; the status text remains readable.
 
 Resource rows combine their visible text and status into one accessible row.
+
+Table rows combine visible cell text for assistive technologies.
 
 Data table rows are selectable buttons when `onSelect` is provided and combine visible cell text for assistive technologies.
 
@@ -88,6 +103,9 @@ Data display components read foreground, muted foreground, primary, card, border
 - `CNStatusBadge(_:variant:showsDot:)`
 - `CNResourceItem(id:title:subtitle:metadata:systemImage:status:statusVariant:)`
 - `CNResourceList(_:onSelect:)`
+- `CNTableColumn(id:title:minWidth:alignment:)`
+- `CNTableRow(id:values:)`
+- `CNTable(columns:rows:)`
 - `CNDataTableColumn(id:title:minWidth:alignment:)`
 - `CNDataTableRow(id:values:)`
 - `CNDataTable(columns:rows:onSelect:)`
@@ -104,6 +122,8 @@ These components are pure SwiftUI and do not use UIKit or AppKit bridges.
 `CNTimeline` should be used with concise event text on compact iPhone layouts and can carry richer detail on iPad and macOS.
 
 `CNResourceList` is preferred over dense tables on iPhone because it preserves readable touch targets and native list ergonomics.
+
+`CNTable` is a non-interactive companion to `CNDataTable` for static reference data.
 
 `CNDataTable` is best for iPad and macOS comparison views. On iPhone, use it for compact datasets only, or prefer `CNResourceList`.
 

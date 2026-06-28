@@ -1,0 +1,25 @@
+{
+  "name": "button-group",
+  "type": "component",
+  "title": "Button Group",
+  "description": "A compact container for related NativeCN button actions.",
+  "stability": "stable",
+  "dependencies": [
+    "tokens",
+    "theme",
+    "button"
+  ],
+  "files": [
+    "Sources/NativeCN/Components/ButtonGroup/CNButtonGroup.swift"
+  ],
+  "previewFiles": [
+    "Sources/NativeCN/Components/ButtonGroup/CNButtonGroup+Previews.swift"
+  ],
+  "docs": [
+    "Docs/Components/Button.md"
+  ],
+  "copyPaste": {
+    "destination": "AppUI/NativeCN/Components/ButtonGroup"
+  }
+}
+
